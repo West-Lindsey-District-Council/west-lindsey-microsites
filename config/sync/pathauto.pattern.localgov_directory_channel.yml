@@ -1,0 +1,24 @@
+uuid: e3e3eb8e-e27b-4456-93d8-7c17a9753261
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: FuH4EeSopmFl1GWNjuvKOoHJu7Hab7m3Gei6QhltUiI
+id: localgov_directory_channel
+label: 'Directory channel'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  bf66b3bc-02c2-48db-9c7e-4f9cb2915bc6:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: bf66b3bc-02c2-48db-9c7e-4f9cb2915bc6
+    context_mapping:
+      node: node
+    bundles:
+      localgov_directory: localgov_directory
+selection_logic: and
+weight: -5
+relationships: {  }

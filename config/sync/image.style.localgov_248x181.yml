@@ -1,0 +1,17 @@
+uuid: f58d7936-10ac-4a5c-b59e-2ef32aabc113
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: squA5wR_4OHvduHlcwVd1zxr0u1hz2ccEh4t_zH0uds
+name: localgov_248x181
+label: 'LocalGov 248x181'
+effects:
+  b8c93f24-2915-4be5-82fd-69940c874fe6:
+    uuid: b8c93f24-2915-4be5-82fd-69940c874fe6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 248
+      height: 181
+      anchor: center-center

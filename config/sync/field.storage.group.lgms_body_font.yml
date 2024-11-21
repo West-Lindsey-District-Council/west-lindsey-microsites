@@ -1,0 +1,83 @@
+uuid: e5ed6fd7-53e1-46e4-ba76-54c7d24b3c13
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - group
+    - options
+_core:
+  default_config_hash: 0ojURZFolhxfba5WXv7i9thurwNwlOr7hS6-t1rFrS0
+id: group.lgms_body_font
+field_name: lgms_body_font
+entity_type: group
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Alegreya sans'
+      label: 'Alegreya sans'
+    -
+      value: Arvo
+      label: Arvo
+    -
+      value: Barlow
+      label: Barlow
+    -
+      value: Cabin
+      label: Cabin
+    -
+      value: 'IBM Plex Sans'
+      label: 'IBM Plex Sans'
+    -
+      value: Inter
+      label: Inter
+    -
+      value: Junction
+      label: Junction
+    -
+      value: Lexend
+      label: Lexend
+    -
+      value: 'Libre Baskerville'
+      label: 'Libre Baskerville'
+    -
+      value: Lora
+      label: Lora
+    -
+      value: Merriweather
+      label: Merriweather
+    -
+      value: 'Open sans'
+      label: 'Open sans'
+    -
+      value: 'PT Sans'
+      label: 'PT Sans'
+    -
+      value: 'PT serif'
+      label: 'PT serif'
+    -
+      value: 'Public sans'
+      label: 'Public sans'
+    -
+      value: Roboto
+      label: Roboto
+    -
+      value: 'Source Serif Pro'
+      label: 'Source Serif Pro'
+    -
+      value: 'Space mono'
+      label: 'Space mono'
+    -
+      value: Vollkorn
+      label: Vollkorn
+    -
+      value: 'Work sans'
+      label: 'Work sans'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

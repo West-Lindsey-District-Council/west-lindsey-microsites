@@ -1,0 +1,66 @@
+uuid: 0646b6e4-3605-4df1-8564-f2422403d804
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.geo_entity_library
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+  module:
+    - domain_path
+    - entity_browser
+    - geo_entity
+    - layout_paragraphs_permissions
+    - localgov_directories
+    - localgov_sa11y
+    - media
+    - node
+    - override_node_options
+    - redirect
+    - system
+    - toolbar
+    - webform_node
+_core:
+  default_config_hash: 62o_3362dMoQv4lHhI6_RiOpc4zgm8XlUdI-RCW0j24
+id: microsites_trusted_editor
+label: 'Microsites trusted editor'
+weight: 3
+is_admin: null
+permissions:
+  - 'access geo_entity_library entity browser pages'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'administer media'
+  - 'administer redirects'
+  - 'create directory facets'
+  - 'create document media'
+  - 'create geo'
+  - 'create image media'
+  - 'create media'
+  - 'create remote_video media'
+  - 'delete all revisions'
+  - 'delete directory facets'
+  - 'delete geo'
+  - 'edit any document media'
+  - 'edit any image media'
+  - 'edit any remote_video media'
+  - 'edit directory facets'
+  - 'edit domain path entity'
+  - 'edit geo'
+  - 'edit layout paragraphs plugin config'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own remote_video media'
+  - 'override all published option'
+  - 'revert all revisions'
+  - 'update any media'
+  - 'update media'
+  - use_localgov_sa11y
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view directory facets'
+  - 'view media'
+  - 'view own unpublished media'
+  - 'view the administration theme'
+  - 'view webform submissions own node'

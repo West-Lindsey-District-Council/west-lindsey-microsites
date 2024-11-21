@@ -1,0 +1,11 @@
+uuid: 3080e3d4-4b98-4bbd-a01c-8f8424d8c8bf
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - domain_path
+id: domain_path.token
+label: Token
+description: ''
+targetEntityType: domain_path
+cache: true

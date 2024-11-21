@@ -1,0 +1,20 @@
+uuid: 98ae2462-ed2d-4dba-85a6-befa1cc15418
+langcode: en-gb
+status: true
+dependencies:
+  theme:
+    - localgov_microsites_base
+_core:
+  default_config_hash: 7EXWAwg1nS_-vBjr2MeAe_CQ6K6psm7fet4TugM5JrA
+id: localgov_microsites_base_page_title
+theme: localgov_microsites_base
+region: page_title
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

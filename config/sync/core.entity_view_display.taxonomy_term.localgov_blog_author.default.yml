@@ -1,0 +1,35 @@
+uuid: 68539c1e-6076-4132-9115-133a89f9852c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.localgov_blog_author.localgov_blog_author_image
+    - taxonomy.vocabulary.localgov_blog_author
+  module:
+    - text
+_core:
+  default_config_hash: WND90F14BxwK-R1bK08e0Upd601PfhngnolaTazyfbY
+id: taxonomy_term.localgov_blog_author.default
+targetEntityType: taxonomy_term
+bundle: localgov_blog_author
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  localgov_blog_author_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: square
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

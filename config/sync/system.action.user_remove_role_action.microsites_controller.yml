@@ -1,0 +1,16 @@
+uuid: 1a29fe69-3a32-4be6-94b9-8e24556b9f3c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - user.role.microsites_controller
+  module:
+    - user
+_core:
+  default_config_hash: TjjLY75OdrTxXcvVZWOTDUEYsJOboYn8AyfD9hU8gKE
+id: user_remove_role_action.microsites_controller
+label: 'Remove the Microsites controller role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: microsites_controller

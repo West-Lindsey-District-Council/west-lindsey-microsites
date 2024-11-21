@@ -1,0 +1,20 @@
+uuid: 542a83cc-64ab-48f3-925c-9ee1d6f22aa4
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: VuQQnUax_25XT-YrTUZjLxJNxJWH6gcwhA69IvMboI8
+name: 'Microsites webform'
+type: localgov_webform
+description: 'A simple page to which a webform can be embedded with field based overrides for target email address and other webform configuration.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

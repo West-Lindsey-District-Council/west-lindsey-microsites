@@ -165,3 +165,5 @@ bin/yaml-cli
 bin/yaml-cli.bat
 bin/yaml-lint
 bin/yaml-lint.bat
+/.editorconfig
+/web/.gitignore
