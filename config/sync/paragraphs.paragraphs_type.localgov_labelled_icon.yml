@@ -1,0 +1,12 @@
+uuid: bbee31ee-d992-4633-a5ce-94ec4c7b3f7a
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: kKPCHiDUyqjNAaYVQE-57ypUwkrFQH0WhmzHx9nAtA0
+id: localgov_labelled_icon
+label: 'Labelled icon'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

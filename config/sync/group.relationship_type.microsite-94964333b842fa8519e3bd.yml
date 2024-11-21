@@ -1,0 +1,19 @@
+uuid: 59df11e3-17b6-420a-b6fe-c90dd17d0130
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.microsite
+    - node.type.localgov_directory_promo_page
+  module:
+    - gnode
+    - node
+_core:
+  default_config_hash: xKP5vvpaKCn_cUiOcWvoydPgJDF0fSw5EBT_QvEhNnM
+id: microsite-94964333b842fa8519e3bd
+group_type: microsite
+content_plugin: 'group_node:localgov_directory_promo_page'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

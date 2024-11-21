@@ -1,0 +1,31 @@
+uuid: 25a009c8-8f73-4ab3-a47b-b2234746fdc7
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.localgov_blog_posts
+    - node.type.localgov_blog_channel
+    - node.type.localgov_blog_post
+_core:
+  default_config_hash: s9RUauTUu_UgMAM_t8eUibK5hRjNRJ9Bq4xosNiaR50
+id: node.localgov_blog_channel.localgov_blog_posts
+field_name: localgov_blog_posts
+entity_type: node
+bundle: localgov_blog_channel
+label: localgov_blog_posts
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      localgov_blog_post: localgov_blog_post
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

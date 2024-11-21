@@ -1,0 +1,26 @@
+uuid: 615bc473-8918-486f-a291-bf10fbb0023a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - filter.format.webform_default
+    - filter.format.wysiwyg
+  module:
+    - filter
+    - fontawesome
+    - geo_entity
+    - media
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access fontawesome additional settings'
+  - 'use text format webform_default'
+  - 'use text format wysiwyg'
+  - 'view geo'
+  - 'view media'

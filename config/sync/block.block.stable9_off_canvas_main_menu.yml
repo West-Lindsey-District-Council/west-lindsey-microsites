@@ -1,0 +1,31 @@
+uuid: a39a8e79-6184-41f8-98b9-72f62241ed1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.lgms_main_menu
+  module:
+    - group_content_menu
+  theme:
+    - stable9
+_core:
+  default_config_hash: FiF3TgmheGT3Zu7TFdk1RUcYHy5REvT7SSSlRlXRC44
+id: stable9_off_canvas_main_menu
+theme: stable9
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'group_content_menu:lgms_main_menu'
+settings:
+  id: 'group_content_menu:lgms_main_menu'
+  label: 'Main menu'
+  label_display: '0'
+  provider: group_content_menu
+  context_mapping:
+    group: '@domain_group.domain_group_context:group'
+  level: 1
+  depth: 0
+  expand_all_items: false
+  relative_visibility: false
+  theme_hook_suggestion: ''
+visibility: {  }

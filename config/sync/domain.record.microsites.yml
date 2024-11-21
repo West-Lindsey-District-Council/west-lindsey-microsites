@@ -1,0 +1,11 @@
+uuid: 5b07e13b-dd96-4cf4-b580-fa406fde2bbe
+langcode: en-gb
+status: true
+dependencies: {  }
+id: microsites
+domain_id: 5497254
+hostname: microsites
+name: Microsites
+scheme: variable
+weight: -1
+is_default: true

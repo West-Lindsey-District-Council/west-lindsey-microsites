@@ -1,0 +1,14 @@
+uuid: eef6acab-8868-47ea-ab5c-43b3806b597b
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hAxZkWrSwmVYcq3TyhiCVzuFhE2zWm5HpZ0BEOI6iww
+id: microsite
+label: Microsite
+description: ''
+new_revision: false
+creator_membership: true
+creator_wizard: false
+creator_roles:
+  - microsite-admin

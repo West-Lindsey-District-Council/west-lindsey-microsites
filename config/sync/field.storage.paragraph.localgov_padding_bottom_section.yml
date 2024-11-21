@@ -1,0 +1,38 @@
+uuid: 4c5177cb-3b62-4503-aef1-af3f2a1335bb
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: 7i4buh4vQE_l3qi1XDlunTQ5qf6GCAs12E7mkid4rP0
+id: paragraph.localgov_padding_bottom_section
+field_name: localgov_padding_bottom_section
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: small
+      label: Small
+    -
+      value: medium
+      label: Medium
+    -
+      value: large
+      label: Large
+    -
+      value: larger
+      label: Larger
+    -
+      value: largest
+      label: Largest
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
