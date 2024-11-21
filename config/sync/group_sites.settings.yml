@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: HQIflDYU9XwDokxrOtz9yhlpREy8JBY41tPmkpLT8WI
+context_provider: '@group_context_domain.group_from_domain_context:group'
+no_site_access_policy: localgov_microsites_group.control_site_access_policy
+site_access_policy: localgov_microsites_group.microsite_content_types_access_policy

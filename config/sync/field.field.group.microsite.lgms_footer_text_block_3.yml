@@ -1,0 +1,24 @@
+uuid: 950b2593-54c9-43a0-a4da-00afb530ae5f
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.group.lgms_footer_text_block_3
+    - group.type.microsite
+  module:
+    - text
+_core:
+  default_config_hash: jlQ0UfVON7MYDGZ99qQ3054aXRaB2H7DyDKmnoYv6R0
+id: group.microsite.lgms_footer_text_block_3
+field_name: lgms_footer_text_block_3
+entity_type: group
+bundle: microsite
+label: 'Footer Text Block 3'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

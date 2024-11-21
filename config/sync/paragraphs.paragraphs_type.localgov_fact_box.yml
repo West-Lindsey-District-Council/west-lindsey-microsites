@@ -1,0 +1,12 @@
+uuid: 215c150c-4aea-4659-bc47-97515699ce16
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: EiP5ytav6NilPUNugBdwOho56NlMacngH6WtBv4lU6U
+id: localgov_fact_box
+label: 'Fact box'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

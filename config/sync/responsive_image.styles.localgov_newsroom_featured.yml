@@ -1,0 +1,21 @@
+uuid: 18c8ed4a-f61c-4e6d-8b9e-14a4b692f26d
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - image.style.localgov_248x181
+    - image.style.localgov_535x302
+  module:
+    - localgov_media
+_core:
+  default_config_hash: qEsoPdiJ2ETqscvQF4l-lnFwDPeLc5ULxlz06hxF5NA
+id: localgov_newsroom_featured
+label: 'LocalGov Newsroom featured'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: localgov_535x302
+    breakpoint_id: localgov_media.bootstrap4_md_768px
+    multiplier: 1x
+breakpoint_group: localgov_media
+fallback_image_style: localgov_248x181

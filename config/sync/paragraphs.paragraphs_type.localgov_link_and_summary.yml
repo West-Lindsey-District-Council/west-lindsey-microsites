@@ -1,0 +1,12 @@
+uuid: aeb8f72d-85f8-43f8-9588-fd836cd0aa8e
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YaSEBB_CY8wmpn9qPWM8-gtfB6lPg1PNV8bwzGxINcw
+id: localgov_link_and_summary
+label: 'Link and summary'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

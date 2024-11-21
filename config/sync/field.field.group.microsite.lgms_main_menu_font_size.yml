@@ -1,0 +1,21 @@
+uuid: d7131216-6369-4f0f-9f91-d214f4ebb3f1
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.group.lgms_main_menu_font_size
+    - group.type.microsite
+_core:
+  default_config_hash: dv3FGwg4EwFwPRpmrBm28y8SRnZN4nj_n4xuQpSFmYc
+id: group.microsite.lgms_main_menu_font_size
+field_name: lgms_main_menu_font_size
+entity_type: group
+bundle: microsite
+label: 'Main menu link size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

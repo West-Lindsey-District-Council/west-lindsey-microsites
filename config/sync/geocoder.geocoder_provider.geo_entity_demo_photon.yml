@@ -1,0 +1,14 @@
+uuid: 2551099b-c0f0-4763-a654-b98f66f7b479
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: q1PrzUVTVXg6njxndGHhUkw7ZW0NseZnF5fXDlPhBzs
+id: geo_entity_demo_photon
+label: 'Photon (Geo Entity module default demo)'
+plugin: photon
+configuration:
+  throttle:
+    period: 1
+    limit: 1
+  rootUrl: 'https://photon.komoot.io'

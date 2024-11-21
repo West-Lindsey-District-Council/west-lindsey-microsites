@@ -1,0 +1,21 @@
+uuid: 58134829-6bc1-42e9-99c2-34ed0e426ba2
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.group.lgms_page_background_colour
+    - group.type.microsite
+_core:
+  default_config_hash: mwpxi_j4xmpD2YwZlL_lGWNGjYJB0xjEEFW3b1OV9q4
+id: group.microsite.lgms_page_background_colour
+field_name: lgms_page_background_colour
+entity_type: group
+bundle: microsite
+label: 'Page background colour'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

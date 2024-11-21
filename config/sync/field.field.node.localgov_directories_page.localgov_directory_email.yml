@@ -1,0 +1,24 @@
+uuid: d7fd7691-98c5-42c0-b7e1-d4b09e844260
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.localgov_directory_email
+    - node.type.localgov_directories_page
+  enforced:
+    module:
+      - localgov_directories
+_core:
+  default_config_hash: '-IYnuhV8pjjTgEurSEctkn1-DI7PCzNv_m4AWjX_R5Y'
+id: node.localgov_directories_page.localgov_directory_email
+field_name: localgov_directory_email
+entity_type: node
+bundle: localgov_directories_page
+label: 'Enquiries email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

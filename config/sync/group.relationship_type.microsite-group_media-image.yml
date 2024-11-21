@@ -1,0 +1,20 @@
+uuid: 5a407ad6-cc8b-4ace-b45d-3475d2b1db4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.microsite
+    - media.type.image
+  module:
+    - groupmedia
+    - media
+_core:
+  default_config_hash: Neo1LVDoeicyJBb0AzcLybBd1vZ-pjcEgKRpXZJ15ag
+id: microsite-group_media-image
+group_type: microsite
+content_plugin: 'group_media:image'
+plugin_config:
+  group_cardinality: 0
+  tracking_enabled: 1
+  entity_cardinality: 1
+  use_creation_wizard: false

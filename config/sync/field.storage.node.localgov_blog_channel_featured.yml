@@ -1,0 +1,21 @@
+uuid: 18d975af-01c2-493e-bd66-a463490d71e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: yI2MaQj0nkPsVdF-g44DOUmR9zUWpsXI_of4rUbJwGk
+id: node.localgov_blog_channel_featured
+field_name: localgov_blog_channel_featured
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

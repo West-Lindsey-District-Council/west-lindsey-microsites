@@ -1,0 +1,8 @@
+uuid: 78ed2525-cf4a-4cea-94ec-07b53c0ff070
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: C4WTRdt9fkvZwT9e_4Tg7b_pIgAr1ZcmMV3mJ9okZeo
+id: lgms_utility_menu
+label: 'Utility menu'

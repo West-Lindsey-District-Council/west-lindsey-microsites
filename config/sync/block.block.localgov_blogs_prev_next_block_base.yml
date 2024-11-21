@@ -1,0 +1,22 @@
+uuid: 3036918c-02a5-4dda-acb2-9da031e6cbd1
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - localgov_blogs
+  theme:
+    - localgov_base
+_core:
+  default_config_hash: 9o58VcgTLNDghDYgNYu90lEXVxQw14af_gga18IZaQE
+id: localgov_blogs_prev_next_block_base
+theme: localgov_base
+region: content_bottom
+weight: -6
+provider: null
+plugin: localgov_blogs_prev_next_block
+settings:
+  id: localgov_blogs_prev_next_block
+  label: 'Blogs prev next block'
+  label_display: '0'
+  provider: localgov_blogs
+visibility: {  }
