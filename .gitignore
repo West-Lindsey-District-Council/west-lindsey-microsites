@@ -121,6 +121,7 @@ provisioners
 # Ignore DDEV config
 .ddev
 /.gitattributes
+bin/
 bin/*
 bin/composer
 bin/composer.bat
