@@ -121,7 +121,6 @@ provisioners
 # Ignore DDEV config
 .ddev
 /.gitattributes
-
 bin/
 bin/*
 bin/composer
@@ -166,4 +165,3 @@ bin/yaml-cli
 bin/yaml-cli.bat
 bin/yaml-lint
 bin/yaml-lint.bat
-
