@@ -23,3 +23,8 @@ variables:
 #   css:
 #     theme:
 #       css/sample.css: {}
+
+invest_west_lindsey:
+  css:
+    theme:
+      style/css/bbd_classy.css: { weight: 10 }
