@@ -1,0 +1,31 @@
+uuid: 710d5a67-8a37-4ab2-a671-3b81afd8bb84
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.lgms_footer_housekeeping
+  module:
+    - group_content_menu
+  theme:
+    - invest_west_lindsey
+_core:
+  default_config_hash: xahzWQaPs0Y_K9CkA0OOnVkhLY-MPIgelGGJvv2d8NM
+id: invest_west_lindsey_footer_housekeeping_menu
+theme: invest_west_lindsey
+region: footer_menu
+weight: 0
+provider: null
+plugin: 'group_content_menu:lgms_footer_housekeeping'
+settings:
+  id: 'group_content_menu:lgms_footer_housekeeping'
+  label: 'Footer housekeeping'
+  label_display: '0'
+  provider: group_content_menu
+  context_mapping:
+    group: '@domain_group.domain_group_context:group'
+  level: 1
+  depth: 1
+  expand_all_items: false
+  relative_visibility: false
+  theme_hook_suggestion: ''
+visibility: {  }

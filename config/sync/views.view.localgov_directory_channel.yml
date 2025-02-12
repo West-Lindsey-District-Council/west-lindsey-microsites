@@ -1,4 +1,4 @@
-uuid: 7f82c793-b6c3-4d26-9a39-600e22a8caef
+uuid: f0248588-8a5e-4001-a48d-efd71b9c868e
 langcode: en-gb
 status: true
 dependencies:
@@ -667,7 +667,6 @@ display:
           geocoder:
             control: false
             settings:
-              popup: false
               autocomplete:
                 placeholder: 'Search Address'
                 title: 'Search an Address on the Map'
@@ -683,6 +682,7 @@ display:
               min_terms: 4
               delay: 800
               zoom: 16
+              popup: false
               options: ''
           map_lazy_load:
             lazy_load: false

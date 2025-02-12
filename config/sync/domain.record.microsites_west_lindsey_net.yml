@@ -1,0 +1,11 @@
+uuid: 6e4dd6c5-479b-4318-9c8c-9e976d73e259
+langcode: en-gb
+status: true
+dependencies: {  }
+id: microsites_west_lindsey_net
+domain_id: 10066514
+hostname: microsites.west-lindsey.net
+name: 'Microsites LIVE controller site'
+scheme: https
+weight: -1
+is_default: true

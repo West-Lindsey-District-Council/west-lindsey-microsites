@@ -1,0 +1,31 @@
+uuid: 1920714f-12a7-42fa-89db-6e549f1aaafe
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.lgms_main_menu
+  module:
+    - group_content_menu
+  theme:
+    - invest_west_lindsey
+_core:
+  default_config_hash: pcgZOmHZBn6WdhKupeP-5DZcIc_peyC4s5UZDKfp2Gk
+id: invest_west_lindsey_main_menu
+theme: invest_west_lindsey
+region: main_menu
+weight: -3
+provider: null
+plugin: 'group_content_menu:lgms_main_menu'
+settings:
+  id: 'group_content_menu:lgms_main_menu'
+  label: 'Main menu'
+  label_display: '0'
+  provider: group_content_menu
+  context_mapping:
+    group: '@domain_group.domain_group_context:group'
+  level: 1
+  depth: 0
+  expand_all_items: false
+  relative_visibility: false
+  theme_hook_suggestion: ''
+visibility: {  }
