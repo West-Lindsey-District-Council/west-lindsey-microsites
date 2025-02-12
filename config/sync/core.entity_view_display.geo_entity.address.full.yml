@@ -1,4 +1,4 @@
-uuid: 4ea6f7b0-4eae-4e50-9460-d17539d21e99
+uuid: 09b61d40-bf63-437e-b612-605a2cbab26d
 langcode: en-gb
 status: true
 dependencies:
@@ -100,7 +100,6 @@ content:
       geocoder:
         control: false
         settings:
-          popup: false
           position: topright
           input_size: 25
           providers:
@@ -110,6 +109,7 @@ content:
           min_terms: 4
           delay: 800
           zoom: 16
+          popup: false
           options: ''
     third_party_settings: {  }
     weight: 0

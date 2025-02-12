@@ -1,0 +1,22 @@
+uuid: 3f3b2a57-0230-4df6-b0ca-d89824c61f6e
+langcode: en-gb
+status: true
+dependencies:
+  theme:
+    - invest_west_lindsey
+_core:
+  default_config_hash: lGhzh0rE1PVDN7rGPrLcFzUnHSmiQOzqsNCFn-EhDXY
+id: invest_west_lindsey_tabs
+theme: invest_west_lindsey
+region: tabs
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,4 +1,4 @@
-uuid: 0aac0d29-c153-44a5-9df5-1dec0c800027
+uuid: 27f3125a-293d-4bfa-808e-12131132fecc
 langcode: en-gb
 status: true
 dependencies:
@@ -12,7 +12,7 @@ field_name: localgov_url
 entity_type: paragraph
 bundle: localgov_banner_primary
 label: URL
-description: 'An optional url. Adding a url here will make the whole box a link.'
+description: 'An optional url. Adding a url here will make the banner title a link.'
 required: false
 translatable: true
 default_value: {  }

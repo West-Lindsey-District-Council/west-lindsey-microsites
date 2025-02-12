@@ -3,6 +3,7 @@ _core:
 module:
   address: 0
   admin_toolbar: 0
+  admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   autosave_form: 0
   block: 0
@@ -168,4 +169,5 @@ theme:
   localgov_claro: 0
   localgov_base: 0
   localgov_microsites_base: 0
+  invest_west_lindsey: 0
 profile: localgov_microsites

@@ -1,0 +1,22 @@
+uuid: b7212c5b-316b-45fe-8a73-8b5c9dd73c99
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - invest_west_lindsey
+_core:
+  default_config_hash: ArvC1EhXmlkTir18Pef9hMJ2__Ma9op-Cz8o2viG2jc
+id: invest_west_lindsey_main_page_content
+theme: invest_west_lindsey
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

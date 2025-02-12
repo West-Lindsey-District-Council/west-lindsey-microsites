@@ -1,0 +1,22 @@
+uuid: e4c1e4e6-f9df-4c33-8b0e-767a84878d7a
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - localgov_search
+  theme:
+    - invest_west_lindsey
+_core:
+  default_config_hash: WIUemtpkGaKQek-XxYZGd-m4yy2GKnF4i-uBZ-7-l4I
+id: invest_west_lindsey_sitewide_search_block
+theme: invest_west_lindsey
+region: search
+weight: 0
+provider: null
+plugin: localgov_sitewide_search_block
+settings:
+  id: localgov_sitewide_search_block
+  label: 'Sitewide search block'
+  label_display: '0'
+  provider: localgov_search
+visibility: {  }

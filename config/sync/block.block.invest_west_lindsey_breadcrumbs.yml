@@ -1,0 +1,26 @@
+uuid: ca1e9004-beed-4f08-8f85-2b4046745a3c
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - invest_west_lindsey
+_core:
+  default_config_hash: kubgpUvHxunCY22GxiIf1Z9UbsvN-fTFJRN0CwX-MUg
+id: invest_west_lindsey_breadcrumbs
+theme: invest_west_lindsey
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

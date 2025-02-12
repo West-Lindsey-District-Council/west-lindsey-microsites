@@ -1,0 +1,16 @@
+uuid: ad739009-d718-4d14-ba7e-4829e90c3595
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - group_context_domain
+third_party_settings:
+  group_context_domain:
+    group_uuid: e6efce19-f7fc-43e5-8892-c12b2197a318
+id: demo2_west_lindsey_co_uk
+domain_id: 5515022
+hostname: demo2.west-lindsey.co.uk
+name: 'DEMO 2'
+scheme: https
+weight: 3
+is_default: false

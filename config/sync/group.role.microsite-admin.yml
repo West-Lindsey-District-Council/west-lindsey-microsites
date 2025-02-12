@@ -1,4 +1,4 @@
-uuid: 0260dce8-1b3b-4be1-a046-19db97b9a927
+uuid: 6b73277d-a1f4-4433-8f13-4f24efdc9fbe
 langcode: en-gb
 status: true
 dependencies:
@@ -19,7 +19,9 @@ permissions:
   - 'access group_node overview'
   - 'access group_term overview'
   - 'administer group domain site settings'
+  - 'administer group invitations'
   - 'administer members'
+  - 'bulk invite users to group'
   - 'create group_media:document entity'
   - 'create group_media:image entity'
   - 'create group_media:remote_video entity'

@@ -1,4 +1,4 @@
-uuid: 372968b0-dfcf-41d3-8238-fd7f7358ef08
+uuid: 045f0f86-e80e-467d-b74c-9170665ff2fa
 langcode: en-gb
 status: true
 dependencies:
@@ -189,6 +189,7 @@ tracker_settings:
     indexing_order: fifo
 options:
   cron_limit: 50
+  delete_on_fail: true
   index_directly: true
   track_changes_in_references: true
 server: localgov_events

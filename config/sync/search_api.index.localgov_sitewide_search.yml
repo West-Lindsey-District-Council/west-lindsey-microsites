@@ -1,4 +1,4 @@
-uuid: 8d3a3109-cdf3-42ee-b1c0-15b5caa62500
+uuid: d67c5b82-f0b5-46d5-b7dd-5b434884f6b8
 langcode: en-gb
 status: true
 dependencies:
@@ -169,6 +169,7 @@ tracker_settings:
     indexing_order: fifo
 options:
   cron_limit: 50
+  delete_on_fail: true
   index_directly: true
   track_changes_in_references: true
 server: localgov_sitewide_search

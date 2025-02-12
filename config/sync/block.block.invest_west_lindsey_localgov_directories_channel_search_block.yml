@@ -1,0 +1,32 @@
+uuid: ed37a5e7-cc85-46bd-b1da-4d01fa3048ef
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - localgov_directories
+    - node
+  theme:
+    - invest_west_lindsey
+_core:
+  default_config_hash: yLyhN4mjeBY6EFq3lpc7n-zJhQiaXlSEKmzqtX_KmAk
+id: invest_west_lindsey_localgov_directories_channel_search_block
+theme: invest_west_lindsey
+region: sidebar_first
+weight: 0
+provider: null
+plugin: localgov_directories_channel_search_block
+settings:
+  id: localgov_directories_channel_search_block
+  label: 'Directory channel search'
+  label_display: '0'
+  provider: localgov_directories
+  context_mapping:
+    node: '@node.node_route_context:node'
+visibility:
+  node_type:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      localgov_directory: localgov_directory

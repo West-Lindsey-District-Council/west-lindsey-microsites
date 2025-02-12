@@ -1,4 +1,4 @@
-uuid: 737df479-82f5-48ff-850a-f0ce947cc215
+uuid: 8ceb2d8e-2ea0-479b-bee0-ad29bc7b323e
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,6 @@ dependencies:
     - views.view.localgov_news_search
   module:
     - views
-    - search_api_autocomplete
   enforced:
     module:
       - localgov_news
@@ -19,11 +18,11 @@ index_id: localgov_news
 suggester_settings:
   live_results:
     fields: {  }
+    view_modes: {  }
     highlight:
       enabled: false
       field: ''
     suggest_keys: false
-    view_modes: {  }
 suggester_weights: {  }
 suggester_limits: {  }
 search_settings:

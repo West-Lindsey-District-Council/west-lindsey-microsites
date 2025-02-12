@@ -1,0 +1,25 @@
+uuid: b1295c9d-3ff8-4ee1-ae24-fcf2a663254c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - facets.facet.localgov_events_locality
+  module:
+    - facets
+  theme:
+    - invest_west_lindsey
+_core:
+  default_config_hash: gCy3bWuDlr13OxBZlh8JAqEckQFCpMpyAX15Frbv3xE
+id: invest_west_lindsey_localgov_events_neighbourhood_microsites_base
+theme: invest_west_lindsey
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'facet_block:localgov_events_locality'
+settings:
+  id: 'facet_block:localgov_events_locality'
+  label: 'Events neighbourhood'
+  label_display: '0'
+  provider: facets
+  block_id: localgov_events_neighbourhood
+visibility: {  }
