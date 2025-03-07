@@ -1,0 +1,40 @@
+.microsite-footer {
+  border-top: calc(1.5*var(--spacing)) solid $gold;
+  .region-microsites-footer {
+    > .lgd-container > .lgd-region__inner {
+      display: grid;
+      grid-template-columns: 75% 25%;
+      grid-template-areas: 
+        "top1 top2"
+        "bottom bottom";
+      .lgd-row:nth-child(1) {
+        grid-area: top1;
+        .field--name-lgms-footer-logos {
+          justify-content: flex-start;
+        }
+      }
+      .lgd-row:nth-child(2) {
+        grid-area: top2;
+        .microsite-footer__housekeeping {
+          justify-content: flex-end;
+
+          .menu--menu-level-0 {
+            flex-direction: column;
+            align-content: end;
+
+            .menu-item {
+              text-align: right;
+              line-height: 1;
+            }
+          }
+        }
+      }
+      .lgd-row:nth-child(3) {
+        grid-area: bottom;
+        .microsite-footer__copyright {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}

@@ -27,4 +27,4 @@ variables:
 invest_west_lindsey:
   css:
     theme:
-      style/css/bbd_classy.css: { weight: 10 }
+      style/css/invest_west_lindsey.css: { weight: 10 }
