@@ -1,5 +1,56 @@
 .microsite-header__main {
   .microsite-header__logo {
-    width: auto;
+    .field--name-lgms-main-logo {
+      width: 500px;
+    }
+  }
+  .microsite-header__menu--main {
+    margin-bottom: calc(var(--spacing) * -1);
+    .menu--menu-level-0 {
+      justify-content: space-between;
+      gap: 0;
+
+      .menu-item {    
+        flex-grow: 1;
+        a {
+          padding: 1rem;  
+          width: 100%;
+          display: inline-block;
+          text-align: center;
+          color: $white;
+          font-weight: bold;
+        }
+      }
+
+      .menu-item:nth-child(1) {
+        a {
+          background-color: $green;
+        }
+      }
+      .menu-item:nth-child(2) {
+        a {
+          background-color: $blue;
+        }
+      }
+      .menu-item:nth-child(3) {
+        a {
+          background-color: $red;
+        }
+      }
+    }
+  }
+  .microsite-header__menu--utility {
+    .block-group-content-menulgms-utility-menu {
+      h2 {
+        display: inline-block;
+        font-size: 1rem;
+        margin-bottom: 0;
+        margin-top: -1px;
+      }
+      .menu {
+        margin-left: 1rem;
+        float: right;
+      }
+    }
   }
 }

@@ -1,0 +1,15 @@
+uuid: f7cd308d-a583-4c20-9210-ae2b3ac6f180
+langcode: en-gb
+status: true
+dependencies: {  }
+name: microsite_footer
+label: 'Microsite Footer'
+effects:
+  b17ed102-d049-454e-aedd-f1f9ae2b7e4a:
+    uuid: b17ed102-d049-454e-aedd-f1f9ae2b7e4a
+    id: image_scale
+    weight: 1
+    data:
+      width: 400
+      height: 170
+      upscale: false

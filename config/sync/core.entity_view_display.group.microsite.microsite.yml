@@ -143,7 +143,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: localgov_microsite_200_85
+      image_style: microsite_footer
       image_loading:
         attribute: lazy
     third_party_settings:

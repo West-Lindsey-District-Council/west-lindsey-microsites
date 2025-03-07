@@ -9,6 +9,7 @@ libraries-extend:
   # of those extending localgov_microsites_base/global
   localgov_microsites_base/variables:
     - invest_west_lindsey/variables
+    - invest_west_lindsey/invest_west_lindsey
     # - invest_west_lindsey/other-library-to-load-on-every-page
     # - invest_west_lindsey/other-library-to-load-on-every-page
   # Add libraries here that extend specific libraries.

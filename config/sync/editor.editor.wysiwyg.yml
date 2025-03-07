@@ -19,23 +19,35 @@ settings:
       - underline
       - bold
       - italic
+      - superscript
+      - subscript
       - '|'
       - undo
       - redo
       - '|'
       - link
       - '|'
+      - alignment
       - bulletedList
       - numberedList
+      - indent
+      - outdent
       - '|'
       - blockQuote
       - drupalInsertImage
       - drupalMedia
+      - specialCharacters
       - '|'
       - sourceEditing
       - '|'
       - insertTable
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
     ckeditor5_heading:
       enabled_headings:
         - heading1
