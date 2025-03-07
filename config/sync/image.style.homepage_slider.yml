@@ -1,0 +1,26 @@
+uuid: 2e7ef12d-ecac-433f-96a8-d713e77f74ad
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.28_9
+  module:
+    - crop
+name: homepage_slider
+label: 'Homepage slider'
+effects:
+  1a045894-a11e-4f27-9282-e09f98230d5d:
+    uuid: 1a045894-a11e-4f27-9282-e09f98230d5d
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: '28_9'
+      automatic_crop_provider: null
+  4bcbcf38-7677-43db-99e9-ecfd251175c0:
+    uuid: 4bcbcf38-7677-43db-99e9-ecfd251175c0
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1440
+      height: 463
+      anchor: center-bottom
