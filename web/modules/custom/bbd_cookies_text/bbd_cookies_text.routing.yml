@@ -1,0 +1,7 @@
+bbd_cookies_text.admin_settings:
+  path: '/admin/config/system/cookies-text'
+  defaults:
+    _form: '\Drupal\bbd_cookies_text\Form\CookiesTextForm'
+    _title: 'Cookies configuration'
+  requirements:
+    _permission: 'administer bbd_cookies_text settings'

@@ -1,0 +1,123 @@
+body.investwl-area {
+  &--none {
+    .region-microsites-header {
+      color: var(--header-text-color);
+      background-color: $gold;
+      .microsite-header__menu--utility {
+        .menu {
+          background-color: $gold;
+        }
+      }
+    }
+    .full__title {
+      border-left: 10px $gold solid;
+      margin-left: -20px;
+      padding: 10px;
+    }
+    .microsite-footer {
+      border-top-color: $gold;
+    }
+  }
+  &--our_offer {
+    .region-microsites-header {
+      color: var(--header-text-color);
+      background-color: $green;
+      .microsite-header__menu--utility { 
+        h2 {
+          color: $white;
+        }
+        .menu {
+          background-color: $green;
+          .menu-item {
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+      .microsite-header__menu--main {
+        .menu--menu-level-0 {
+          .menu-item:nth-child(1) {
+            border-color: $gold;
+          }
+        }
+      }
+    }
+    .full__title {
+      border-left: 10px $green solid;
+      margin-left: -20px;
+      padding: 10px;
+    }
+    .microsite-footer {
+      border-top-color: $green;
+    }
+  }
+  &--our_district {
+    .region-microsites-header {
+      color: var(--header-text-color);
+      background-color: $blue;
+      .microsite-header__menu--utility {
+        h2 {
+          color: $white;
+        }
+        .menu {
+          background-color: $blue;
+          .menu-item {
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+      .microsite-header__menu--main {
+        .menu--menu-level-0 {
+          .menu-item:nth-child(2) {
+            border-color: $gold;
+          }
+        }
+      }
+    }
+    .full__title {
+      border-left: 10px $blue solid;
+      margin-left: -20px;
+      padding: 10px;
+    }
+    .microsite-footer {
+      border-top-color: $blue;
+    }
+  }
+  &--our_ambition {
+    .region-microsites-header {
+      color: var(--header-text-color);
+      background-color: $red;
+      .microsite-header__menu--utility {
+        h2 {
+          color: $white;
+        }
+        .menu {
+          background-color: $red;
+          .menu-item {
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+      .microsite-header__menu--main {
+        .menu--menu-level-0 {
+          .menu-item:nth-child(3) {
+            border-color: $gold;
+          }
+        }
+      }
+    }
+    .full__title {
+      border-left: 10px $red solid;
+      margin-left: -20px;
+      padding: 10px;
+    }
+    .microsite-footer {
+      border-top-color: $red;
+    }
+  }
+}

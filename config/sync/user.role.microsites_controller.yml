@@ -7,7 +7,9 @@ dependencies:
     - media.type.document
     - media.type.image
     - media.type.remote_video
+    - taxonomy.vocabulary.site_area
   module:
+    - bbd_cookies_text
     - domain
     - domain_path
     - entity_browser
@@ -20,6 +22,7 @@ dependencies:
     - redirect
     - role_delegation
     - system
+    - taxonomy
     - toolbar
     - tour
     - webform
@@ -43,6 +46,7 @@ permissions:
   - 'access webform help'
   - 'access webform overview'
   - 'access webform submission user'
+  - 'administer bbd_cookies_text settings'
   - 'administer domains'
   - 'administer media'
   - 'administer redirects'
@@ -63,6 +67,7 @@ permissions:
   - 'create media'
   - 'create microsite group'
   - 'create remote_video media'
+  - 'create terms in site_area'
   - 'create webform'
   - 'delete any webform'
   - 'delete any webform submission'
@@ -70,6 +75,8 @@ permissions:
   - 'delete geo'
   - 'delete own webform'
   - 'delete own webform submission'
+  - 'delete term revisions in site_area'
+  - 'delete terms in site_area'
   - 'delete webform submissions any node'
   - 'delete webform submissions own node'
   - 'edit any document media'
@@ -84,12 +91,14 @@ permissions:
   - 'edit own image media'
   - 'edit own remote_video media'
   - 'edit own webform'
+  - 'edit terms in site_area'
   - 'edit webform assets'
   - 'edit webform source'
   - 'edit webform submissions any node'
   - 'edit webform submissions own node'
   - 'edit webform twig'
   - 'edit webform variants'
+  - 'revert term revisions in site_area'
   - 'select account cancellation method'
   - 'update any media'
   - 'update media'
@@ -102,6 +111,7 @@ permissions:
   - 'view media'
   - 'view own unpublished media'
   - 'view own webform submission'
+  - 'view term revisions in site_area'
   - 'view the administration theme'
   - 'view user email addresses'
   - 'view webform submissions any node'

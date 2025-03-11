@@ -1,3 +1,13 @@
 .lgd-container {
   max-width: var(--width-mega);
 }
+
+.full {
+  .field--name-body,
+  .field--name-localgov-page-summary,
+  .field--name-localgov-directory-standfirst,
+  .field--name-localgov-text,
+  .field--name-body {
+    max-width: 100%;
+  }
+}

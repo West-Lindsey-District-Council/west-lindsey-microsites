@@ -1,0 +1,5 @@
+name: Big Blue Door cookie settings
+type: module
+description: 'Set up display messages when third party cookies are not accepted in <a href="/admin/config/system/cookies-text">Configuration > System > Cookie Settings</a><br><strong>Please note:</strong> API Keys and Product Licence type are set in settings.php'
+core_version_requirement: ^9 || ^10
+package: Custom

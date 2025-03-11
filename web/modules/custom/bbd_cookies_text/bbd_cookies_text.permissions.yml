@@ -1,0 +1,3 @@
+administer bbd_cookies_text settings:
+  title: 'Administer cookie settings'
+  restrict access: false

@@ -5,10 +5,12 @@ dependencies:
   config:
     - media.type.image
     - node.type.localgov_news_article
+    - taxonomy.vocabulary.site_area
   module:
     - media
     - node
     - system
+    - taxonomy
     - toolbar
   enforced:
     module:
@@ -34,4 +36,5 @@ permissions:
   - 'edit own localgov_news_article content'
   - 'revert localgov_news_article revisions'
   - 'view localgov_news_article revisions'
+  - 'view term revisions in site_area'
   - 'view the administration theme'

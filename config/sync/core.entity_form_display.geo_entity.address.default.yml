@@ -89,6 +89,7 @@ content:
       geocoder:
         control: false
         settings:
+          popup: false
           position: topright
           input_size: 20
           providers:
@@ -110,7 +111,6 @@ content:
           min_terms: 4
           delay: 800
           zoom: 16
-          popup: false
           options: ''
       geometry_validation: 0
       multiple_map: false
