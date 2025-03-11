@@ -1,0 +1,9 @@
+uuid: db2032bb-4c75-431c-99d2-b9a359796c5f
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'Site Area'
+vid: site_area
+description: null
+weight: 0
+new_revision: false

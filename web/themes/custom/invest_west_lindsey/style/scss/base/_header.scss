@@ -23,16 +23,22 @@
       }
 
       .menu-item:nth-child(1) {
+        border: 2px $green solid;
+        border-bottom: 0;
         a {
           background-color: $green;
         }
       }
       .menu-item:nth-child(2) {
+        border: 2px $blue solid;
+        border-bottom: 0;
         a {
           background-color: $blue;
         }
       }
       .menu-item:nth-child(3) {
+        border: 2px $red solid;
+        border-bottom: 0;
         a {
           background-color: $red;
         }

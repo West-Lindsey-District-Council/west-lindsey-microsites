@@ -5,12 +5,14 @@ dependencies:
   config:
     - filter.format.webform_default
     - filter.format.wysiwyg
+    - taxonomy.vocabulary.site_area
   module:
     - filter
     - fontawesome
     - geo_entity
     - media
     - system
+    - taxonomy
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -24,3 +26,4 @@ permissions:
   - 'use text format wysiwyg'
   - 'view geo'
   - 'view media'
+  - 'view term revisions in site_area'

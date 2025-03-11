@@ -1,0 +1,33 @@
+uuid: 47d98e67-69d3-4db8-be6e-521a39c101e1
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_site_area
+field_name: field_site_area
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: none
+      label: None
+    -
+      value: our_offer
+      label: 'Our Offer'
+    -
+      value: our_district
+      label: 'Our District'
+    -
+      value: our_ambition
+      label: 'Our Ambition'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

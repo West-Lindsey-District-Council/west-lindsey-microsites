@@ -4,3 +4,17 @@
  * @file
  * Theme function for the Invest West Lindsey theme.
  */
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+
+function invest_west_lindsey_preprocess_node(&$variables) {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $variables['node'];
+
+  if ($node->hasField('field_site_area') && (!$node->get('field_site_area')->isEmpty())) {
+      $variables['attributes']['class'][] = 'investwl-area--' . $node->get('field_site_area')->value;
+  }
+
+}

@@ -1,0 +1,30 @@
+civic_api_key: null
+civic_product_type: null
+title: 'This site uses cookies'
+description: "We use necessary cookies to make our site work. We'd also like to set optional analytics cookies to help us improve it. We won't set optional cookies unless you enable them. There are no external advertisements on this site so we do not set any Advertising Cookies. Using this tool will set a cookie on your device to remember your preferences."
+cookie_url: 'http://beta.investwl.co.uk/cookies'
+cookie_policy: 'For more detailed information about the cookies we use, see our'
+cookie_policy_name: 'Cookies page'
+cookie_policy_date: '2025-03-11'
+necessary_title: 'Necessary Cookies'
+necessary_description: 'Necessary cookies enable core functionality such as security, network management, and accessibility. You may disable these by changing your browser settings, but this may affect how the website functions.'
+third_Party_cookie_title: 'Warning: Some cookies require your attention'
+third_party_cookie_summary: 'Consent for the following cookies may not be automatically revoked. Please use the following the link(s) to find out how to opt out manually.'
+notify_title: 'Your choice regarding cookies on this site'
+notify_description: 'We use cookies to optimise site functionality and give you the best possible experience.'
+accessibility_alert: 'This site uses cookies to store information. Press accesskey C to learn more about your options.'
+necessary_cookies: 'SESS*'
+analytics_label: 'Analytical Cookies'
+analytics_description: 'These cookies are used to collect information to analyse the traffic to our website and how visitors are using our website. For example, these cookies may track things such as how long you spend on the website or the pages you visit which helps us to understand how we can improve our website site for you. The information collected through these analytical cookies do not identify any individual visitor.'
+analytics_cookies: "_ga\r\n_gid\r\n_gat\r\n_ga_*\r\n_gat_*"
+functional_label: 'Functional Cookies'
+functional_description: 'These cookies are used to provide you with a more personalized experience on our website and to remember choices you make when you use our website. These services include the ability to use the ability to change your language and whether we remember your choice to hide infomration banners. The information collected through these functional cookies do not identify any individual visitor.'
+functional_cookies: ''
+third_party_label: 'Third Party Cookies'
+third_party_description: 'We use a number of Third Party services to provide an enhanced user experience. These services include third party content, such as videos from Youtube.'
+third_party_cookies: ''
+embed_cookies_text: "We're sorry, this feature can place cookies in your browser and has been disabled."
+video_cookies_text: "We're sorry, this video can place cookies in your browser and has been disabled."
+feature_cookies_text: "To continue using this functionality, please [link] and accept 'Third Party Cookies'."
+link_cookies_text: 'open cookie preferences'
+button_cookies_text: 'Open cookie preferences'

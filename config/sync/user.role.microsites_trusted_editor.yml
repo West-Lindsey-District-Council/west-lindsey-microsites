@@ -7,6 +7,7 @@ dependencies:
     - media.type.document
     - media.type.image
     - media.type.remote_video
+    - taxonomy.vocabulary.site_area
   module:
     - domain_path
     - entity_browser
@@ -19,6 +20,7 @@ dependencies:
     - override_node_options
     - redirect
     - system
+    - taxonomy
     - toolbar
     - webform_node
 _core:
@@ -62,5 +64,6 @@ permissions:
   - 'view directory facets'
   - 'view media'
   - 'view own unpublished media'
+  - 'view term revisions in site_area'
   - 'view the administration theme'
   - 'view webform submissions own node'
