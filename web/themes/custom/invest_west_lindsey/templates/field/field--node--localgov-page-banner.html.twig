@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a banner field.
+ */
+#}
+
+{% if multiple %}
+  <div class="owl-outer">
+    <div class="owl-carousel owl-theme owl-big">
+      {% for item in items %}
+          <div{{ item.attributes }}>{{ item.content }}</div>
+      {% endfor %}
+    </div>
+    <div class="owl-control">
+      <button type="button" class="play"><span class="fa-regular fa-circle-play fa-2xl" aria-hidden="true"></span><span class="button-text visually-hidden"> {{ 'Play'|t }}</span></button>
+      <button type="button" class="pause"><span class="fa-regular fa-circle-pause fa-2xl" aria-hidden="true"></span><span class="button-text visually-hidden"> {{ 'Pause'|t }}</span></button>
+    </div>
+  </div>
+{% else %}
+  {% for item in items %}
+    <div{{ attributes }}>{{ item.content }}</div>
+  {% endfor %}
+{% endif %}
