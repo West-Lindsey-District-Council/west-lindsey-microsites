@@ -28,12 +28,13 @@ invest_west_lindsey:
   css:
     theme:
       style/css/invest_west_lindsey.css: { weight: 10 }
-  
+
   js:
     '//cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js': {type: external }
+    js/owl.carousel.js: {}
     js/civic_cookie_control.js: {}
     js/invest_west_lindsey.js: {}
-  
+
   dependencies:
     - core/jquery
     - core/drupal
