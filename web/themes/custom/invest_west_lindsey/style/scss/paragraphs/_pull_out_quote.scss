@@ -1,0 +1,43 @@
+.paragraph--type--localgov-quote {
+  margin-inline: -1rem; // removes the 1rem inline margin
+  background-color: $white;
+  color: $grey;
+  padding: 3.5rem 4rem 2rem;
+  border: none;
+
+  .pull-out-quote__content {
+    position: relative;
+    color: inherit;
+
+    .fa-solid,
+    .svg-inline--fa {
+      display: inline-block;
+      position: absolute;
+      font-size: 3rem;
+      color: $coral;
+
+      &.fa-quote-left {
+        top: -2rem;
+        left: 0;
+      }
+
+      &.fa-quote-right {
+        bottom: -2rem;
+        right: 0;
+      }
+    }
+
+    .field--name-localgov-text-plain {
+      display: inline-block;
+      margin-inline: 6rem;
+      font-size: 2rem;
+    }
+  }
+
+  .pull-out-quote__author {
+    margin-inline: 6rem;
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: inherit;
+  }
+}

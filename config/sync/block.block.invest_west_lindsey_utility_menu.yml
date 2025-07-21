@@ -19,7 +19,7 @@ plugin: 'group_content_menu:lgms_utility_menu'
 settings:
   id: 'group_content_menu:lgms_utility_menu'
   label: 'Contact us'
-  label_display: visible
+  label_display: '0'
   provider: group_content_menu
   context_mapping:
     group: '@domain_group.domain_group_context:group'

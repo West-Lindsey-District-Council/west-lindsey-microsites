@@ -2,6 +2,8 @@ uuid: d97b7c56-fc04-4431-92d0-b7bbaae60e8f
 langcode: en-gb
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - invest_west_lindsey
 _core:
@@ -15,6 +17,10 @@ plugin: page_title_block
 settings:
   id: page_title_block
   label: 'Page title'
-  label_display: '0'
+  label_display: visible
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: ''
