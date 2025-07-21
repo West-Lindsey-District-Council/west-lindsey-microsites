@@ -1,19 +1,40 @@
 // Theme colour pallet
 
-$red: #781800;
-$blue: #345a92;
-$green: #385725;
-$black: #1d1d1d;
+$black: #000;
 $white: #fff;
-$gold: #b6a267;
 
-$grey_darkest: #3c3c3c;
-$grey_dark: #444;
-$grey: #999;
-$grey-light: #B7B1A9;
-$grey-lighter: #D1CCC4;
-$grey-lightest: #e4e4e4;
-$caption-bg: $grey-lightest;
+// WL Spring/Summer Campaign Colour Palette
+$sky: #92D2F4;
+$apple: #AACD72;
+$coral: #F49D75;
+$sun: #FFD047;
+$navy: #001c51;
+$green: #225900;
+$red: #660500;
+$gold: #a3a353;
+$putty: #F2E5DC;
+
+// Invest WL Canva design
+$blue_grey: #39697d;
+$blue_grey_dark: #39697d;
+
+$grey_darkest: #1D1D20;
+$grey_dark: #383A42;
+$grey: #494d57;
+$grey_light: #64656c;
+$grey_lighter: #A6ACB5;
+$grey_lightest: #E2E2E4;
+$caption-bg: $grey_lightest;
 
 $transparent_white: rgba(255,255,255,.5);
+$transparent_grey: rgba(73,77,87,.19);
 $transparent_black: rgba(0,0,0,.19);
+
+$body-bg: $grey;
+$header-bg: $grey;
+$footer-bg: $blue_grey_dark;
+$form_btn_bg: $blue_grey;
+$form_field_border: $grey_lightest;
+$button_bg: $coral;
+$button_color: $grey_dark;
+$featured_card_bg: $grey_light;

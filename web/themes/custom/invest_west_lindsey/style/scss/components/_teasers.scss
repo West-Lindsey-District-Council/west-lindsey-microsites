@@ -1,0 +1,94 @@
+.paragraph--type--localgov-featured-teasers {
+  .featured-teasers__teasers {
+    .field__items {
+      @include flexbox;
+      @include flex-direction(column);
+      @include justify-content(space-around);
+      @include align-items(center);
+      gap: 1rem;
+
+      > .field__item {
+        margin-block-start: 0;
+        max-width: 350px;
+        @include box-shadow(15px 15px 15px -3px $black);
+
+        .paragraph--type--localgov-featured-teaser {
+          position: relative;
+          @include flexbox;
+          @include flex-direction(column);
+          @include justify-content(space-between);
+          padding-block-end: 1rem;
+          color: $white;
+          background-color: $featured_card_bg;
+
+          .featured-teaser__content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+
+            .field--name-localgov-text {
+              flex-grow: 1;
+            }
+          }
+
+          .featured-teaser__image {
+            padding-inline: 1rem;
+
+            .contextual-region {
+              position: unset;
+            }
+          }
+
+          a {
+            &::after {
+              content: '';
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint($desk) {
+  .paragraph--type--localgov-featured-teasers {
+    .featured-teasers__teasers {
+      .field__items {
+        @include flex-direction(row);
+
+        .field__item {
+          margin-block-start: 0;
+          max-width: 350px;
+
+          .paragraph--type--localgov-featured-teaser {
+            @include flexbox;
+            @include flex-direction(column);
+            @include justify-content(space-between);
+            padding-block-end: 1rem;
+            color: $white;
+            background-color: $featured_card_bg;
+
+            .featured-teaser__content {
+              display: flex;
+              flex-direction: column;
+              flex-grow: 1;
+
+              .field--name-localgov-text {
+                flex-grow: 1;
+              }
+            }
+
+            .featured-teaser__image {
+              padding-inline: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

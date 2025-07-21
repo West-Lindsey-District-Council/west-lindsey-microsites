@@ -3,6 +3,7 @@ langcode: en-gb
 status: true
 dependencies:
   config:
+    - field.field.node.localgov_page.field_hide_title
     - field.field.node.localgov_page.field_site_area
     - field.field.node.localgov_page.localgov_hide_summary
     - field.field.node.localgov_page.localgov_page_banner
@@ -66,10 +67,12 @@ content:
     type: entity_reference_revisions_entity_view
     label: hidden
     settings:
-      view_mode: responsive_banner
+      view_mode: default
       link: ''
-    third_party_settings: {  }
-    weight: 0
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 2
     region: content
   localgov_page_summary:
     type: basic_string
@@ -90,6 +93,7 @@ content:
     weight: 2
     region: content
 hidden:
+  field_hide_title: true
   field_site_area: true
   langcode: true
   links: true

@@ -1,0 +1,45 @@
+button, input, optgroup, select, textarea {
+  color: var(--color-text);
+  border-color: $form_field_border;
+}
+
+.form-submit, input[type="submit"]:not(.homepage-submit), %button {
+  display: inline-block;
+  padding: 0.25rem 2rem;
+  background: $button_bg;
+  color: $button_color;
+  border: 3px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  @include border-radius(2rem);
+
+  &:hover,
+  &:active {
+    border-color: $grey_lightest;
+  }
+
+  &:focus {
+    border-color: $grey_lightest;
+    text-decoration: underline;
+
+    &:hover,
+    &:active {
+      @include text-decoration-thickness();
+    }
+  }
+
+  &[disabled] {
+    opacity: .5;
+  }
+
+  &[id^="edit-reset"],
+  &[id^="edit-delete"] {
+    color: $black;
+  }
+}
+
+input[type="submit"].homepage-submit {
+  background-color: $blue_grey;
+  color: $white;
+  border: none;
+}

@@ -17,4 +17,8 @@ function invest_west_lindsey_preprocess_node(&$variables) {
       $variables['attributes']['class'][] = 'investwl-area--' . $node->get('field_site_area')->value;
   }
 
+   if ($node->hasField('field_hide_title') && !$node->get('field_hide_title')->isEmpty() && $node->get('field_hide_title')->value) {
+      $variables['hide_title'] = $node->get('field_hide_title')->value;
+  }
+
 }

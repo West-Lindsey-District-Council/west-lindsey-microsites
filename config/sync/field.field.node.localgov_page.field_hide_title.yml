@@ -1,0 +1,21 @@
+uuid: c27d87ab-c365-4e6e-9d02-60a9cf0a4414
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_title
+    - node.type.localgov_page
+id: node.localgov_page.field_hide_title
+field_name: field_hide_title
+entity_type: node
+bundle: localgov_page
+label: 'Hide title'
+description: 'Hide the title by making it "visually hidden", but still on the page for assistive technology purposes'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
