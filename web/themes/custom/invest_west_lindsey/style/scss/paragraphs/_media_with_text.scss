@@ -1,0 +1,60 @@
+.paragraph--type--localgov-media-with-text {
+  padding: 1rem 15rem 0;
+  margin-block-end: 0;
+
+  .media-with-text__inner {
+    align-items: center;
+
+    .media-with-text__media {
+      padding: 2rem;
+
+      > .field__item {
+        position: relative;
+        border: 0.5rem solid $coral;
+        display: block;
+
+        > * {
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .media-with-text__body {
+    a {
+        @extend %button;
+      }
+  }
+
+  &.media-with-text--media-right {
+    .media-with-text__body {
+      padding-inline-start: 2rem;
+    }
+
+    .media-with-text__media {
+      > .field__item {
+        > * {
+          @include box-shadow(-15px 15px 15px -3px $black);
+          top: 1rem;
+          right: 1rem;
+        }
+      }
+    }
+  }
+
+  &.media-with-text--media-left {
+    .media-with-text__body {
+      padding-inline-end: 2rem;
+    }
+
+    .media-with-text__media {
+      > .field__item {
+        > * {
+          @include box-shadow(15px 15px 15px -3px $black);
+          top: 1rem;
+          left: 1rem;
+        }
+      }
+    }
+  }
+}

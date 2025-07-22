@@ -7,6 +7,8 @@ dependencies:
     - image.style.thumbnail
     - media.type.image
   module:
+    - decorative_image_widget
+    - field_formatter_class
     - image_widget_crop
     - path
 _core:
@@ -23,9 +25,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_media_image:
+    type: image_widget_crop
+    weight: 1
+    region: content
     settings:
-      show_default_crop: true
-      warn_multiple_usages: true
+      progress_indicator: throbber
       preview_image_style: thumbnail
       crop_preview_image_style: crop_thumbnail
       crop_list:
@@ -34,15 +38,17 @@ content:
         - '3_2'
         - '7_3'
         - '8_7'
-        - square
         - freestyle
-      progress_indicator: throbber
+        - square
       crop_types_required: {  }
+      warn_multiple_usages: true
       show_crop_area: false
-    third_party_settings: {  }
-    type: image_widget_crop
-    weight: 1
-    region: content
+      show_default_crop: true
+    third_party_settings:
+      decorative_image_widget:
+        use_decorative_checkbox: true
+      field_formatter_class:
+        class: ''
   langcode:
     type: language_select
     weight: 2
@@ -66,10 +72,10 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 7
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   translation:
     weight: 6
@@ -79,12 +85,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 4
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
-    region: content
     third_party_settings: {  }
 hidden:
   moderation_state: true

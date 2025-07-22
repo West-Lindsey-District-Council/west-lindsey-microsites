@@ -13,7 +13,7 @@ _core:
 id: localgov_microsites_base_footer_housekeeping_menu
 theme: localgov_microsites_base
 region: footer_menu
-weight: 0
+weight: -9
 provider: null
 plugin: 'group_content_menu:lgms_footer_housekeeping'
 settings:

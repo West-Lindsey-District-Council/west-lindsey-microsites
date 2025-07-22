@@ -100,8 +100,23 @@
       {{ drupal_entity('block', 'localgov_microsites_base_breadcrumbs') }}
     </div>
 
+    {% if hide_title %}
+      {%
+        set heading_classes = [
+          'full__title',
+          'visually-hidden',
+        ]
+      %}
+    {% else %}
+      {%
+        set heading_classes = [
+          'full__title',
+        ]
+      %}
+    {% endif %}
+
     {{ title_prefix }}
-    <h1{{ title_attributes.addClass('full__title') }}>
+    <h1{{ title_attributes.addClass(heading_classes) }}>
       {{ label }}
     </h1>
     {{ title_suffix }}
@@ -124,10 +139,10 @@
     </div>
   {% endif %}
 
-  <div class="lgd-container padding-horizontal">
-    {% if content.group_page_bottom %}
+  {% if content.group_page_bottom %}
+    <div class="lgd-container padding-horizontal">
       {{ content.group_page_bottom }}
-    {% endif %}
-  </div>
+    </div>
+  {% endif %}
 
 </article>

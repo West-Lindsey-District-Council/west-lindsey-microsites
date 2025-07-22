@@ -1,123 +1,71 @@
-body.investwl-area {
-  &--none {
-    .region-microsites-header {
-      color: var(--header-text-color);
-      background-color: $gold;
-      .microsite-header__menu--utility {
-        .menu {
-          background-color: $gold;
+.page-node-type-localgov-page {
+  .main {
+    margin-block-end: -2rem;
+    padding-bottom: var(--spacing-large);
+
+    .node--type-localgov-page {
+      .lgd-container {
+        background-color: $body-bg;
+      }
+
+      .lgd-page-section {
+        .lgd-container {
+          padding-block-end: calc(var(--spacing-large) * 2);
         }
       }
-    }
-    .full__title {
-      border-left: 10px $gold solid;
-      margin-left: -20px;
-      padding: 10px;
-    }
-    .microsite-footer {
-      border-top-color: $gold;
+
+      .full__layout-section {
+        padding-block-end: var(--spacing-large);
+        margin-bottom: calc(var(--spacing) * -1);
+      }
+
+      .layout__region {
+        > * {
+          &:last-child {
+            margin-block-end: 0;
+          }
+        }
+      }
     }
   }
-  &--our_offer {
-    .region-microsites-header {
-      color: var(--header-text-color);
-      background-color: $green;
-      .microsite-header__menu--utility { 
-        h2 {
-          color: $white;
-        }
-        .menu {
-          background-color: $green;
-          .menu-item {
-            a {
-              color: $white;
-            }
+
+  .paragraph--type--webform {
+    margin: 6rem -1rem 0;
+    background-color: $coral;
+    color: $grey_dark;
+
+    .field--name-field-webform {
+      width: 50%;
+      margin-inline: auto;
+
+      .webform-submission-newsletter-form {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        grid-template-areas:
+          "header header"
+          "field  submit";
+
+        .js-form-type-processed-text {
+          grid-area: header;
+          margin-block-start: 1rem;
+
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6,
+          p {
+            color: inherit;
+            margin-bottom: var(--spacing-smaller);
           }
         }
       }
-      .microsite-header__menu--main {
-        .menu--menu-level-0 {
-          .menu-item:nth-child(1) {
-            border-color: $gold;
-          }
-        }
+
+      input.form-email {
+        color: inherit;
+        border: none;
       }
-    }
-    .full__title {
-      border-left: 10px $green solid;
-      margin-left: -20px;
-      padding: 10px;
-    }
-    .microsite-footer {
-      border-top-color: $green;
-    }
-  }
-  &--our_district {
-    .region-microsites-header {
-      color: var(--header-text-color);
-      background-color: $blue;
-      .microsite-header__menu--utility {
-        h2 {
-          color: $white;
-        }
-        .menu {
-          background-color: $blue;
-          .menu-item {
-            a {
-              color: $white;
-            }
-          }
-        }
-      }
-      .microsite-header__menu--main {
-        .menu--menu-level-0 {
-          .menu-item:nth-child(2) {
-            border-color: $gold;
-          }
-        }
-      }
-    }
-    .full__title {
-      border-left: 10px $blue solid;
-      margin-left: -20px;
-      padding: 10px;
-    }
-    .microsite-footer {
-      border-top-color: $blue;
-    }
-  }
-  &--our_ambition {
-    .region-microsites-header {
-      color: var(--header-text-color);
-      background-color: $red;
-      .microsite-header__menu--utility {
-        h2 {
-          color: $white;
-        }
-        .menu {
-          background-color: $red;
-          .menu-item {
-            a {
-              color: $white;
-            }
-          }
-        }
-      }
-      .microsite-header__menu--main {
-        .menu--menu-level-0 {
-          .menu-item:nth-child(3) {
-            border-color: $gold;
-          }
-        }
-      }
-    }
-    .full__title {
-      border-left: 10px $red solid;
-      margin-left: -20px;
-      padding: 10px;
-    }
-    .microsite-footer {
-      border-top-color: $red;
     }
   }
 }

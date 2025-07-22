@@ -51,9 +51,9 @@ content:
       popup: false
       popup_content: ''
       leaflet_popup:
-        options: '{"maxWidth":"300","minWidth":"50","autoPan":true}'
         control: '0'
         content: ''
+        options: '{"maxWidth":"300","minWidth":"50","autoPan":true}'
       map_position:
         force: false
         center:
@@ -89,8 +89,8 @@ content:
       leaflet_markercluster:
         control: false
         options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds": false}'
-        excluded: ''
         include_path: false
+        excluded: ''
       fullscreen:
         control: false
         options: '{"position":"topleft","pseudoFullscreen":false}'

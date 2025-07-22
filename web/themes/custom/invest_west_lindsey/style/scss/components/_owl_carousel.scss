@@ -1,11 +1,30 @@
 .full__banner {
-  clear: both;
+  max-width: var(--width-mega);
+  margin-inline: auto;
+  margin-bottom: calc(var(--spacing-large) * -1);
+  padding-bottom: var(--spacing-large);
+  background-color: $body-bg;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 95%;
+    left: 0;
+    max-width: var(--width-mega);
+    margin-inline: auto;
+    background-image: linear-gradient($header-bg, transparent);
+  }
+
   .owl-theme {
     .owl-dots {
       position: absolute;
       bottom: 0;
       width: 100%;
       text-align: center;
+
       .owl-dot {
         background: 0 0;
         color: inherit;
@@ -14,22 +33,24 @@
         font: inherit;
         display: inline-block;
         zoom: 1;
+
         cursor: pointer;
         -webkit-user-select: none;
         -khtml-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+
         span {
           width: 10px;
           height: 10px;
           margin: 5px 7px;
           background: #D6D6D6;
           display: block;
-          -webkit-backface-visibility: visible;
           transition: opacity .2s ease;
           border-radius: 30px;
         }
+
         &.active {
           span {
             background: #869791;
@@ -37,6 +58,7 @@
         }
       }
     }
+
     .owl-nav {
       [class*=owl-] {
         position: absolute;
@@ -56,9 +78,10 @@
         display: none;
         opacity: .5;
         cursor: default;
+
         &:hover,
         &:focus {
-          background: $transparent_black;
+          background: $transparent_grey;
           color: $white;
         }
       }
@@ -67,6 +90,7 @@
         margin-top: 10px;
       }
     }
+
     &.owl-carousel {
       display: none;
       width: 100%;
@@ -118,6 +142,7 @@
           img {
             border: 5px solid transparent;
             cursor: pointer;
+
             &:hover,
             &:focus {
               border-color: $gold;
@@ -222,17 +247,20 @@
 
     .owl-control {
       position: absolute;
-      top: 0;
+      bottom: 0;
       right: 5px;
       z-index: 1;
       display: flex;
+
       button {
         display: none;
         margin-right: 0;
+
         &.play,
         &.pause {
           display: inline-flex;
           align-items: center;
+
           .button-text {
             margin-left: 5px;
           }
@@ -245,9 +273,10 @@
       color: $white;
       margin: 5px;
       padding: 6px;
-      background: $transparent_black;
+      background: $transparent_grey;
       border: 4px solid transparent;
       font-size: 0.5rem;
+
       @include breakpoint($widemob) {
         font-size: 1rem;
       }
@@ -257,7 +286,7 @@
         background: $transparent_white;
         color: $black;
         text-decoration: none;
-        border-color: $gold;
+        border-color: $sun;
       }
 
     }
@@ -270,10 +299,11 @@
           .js-media-library-item-preview {
             display: block;
           }
+
           .image-caption {
             margin: auto;
             font-size: 0.9em;
-            border: 1px solid $grey-lightest;
+            border: 1px solid $grey_lightest;
             padding: 10px;
             background: $caption-bg;
             text-align: center;

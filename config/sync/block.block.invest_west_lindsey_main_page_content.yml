@@ -11,7 +11,7 @@ _core:
 id: invest_west_lindsey_main_page_content
 theme: invest_west_lindsey
 region: content
-weight: 0
+weight: -9
 provider: null
 plugin: system_main_block
 settings:

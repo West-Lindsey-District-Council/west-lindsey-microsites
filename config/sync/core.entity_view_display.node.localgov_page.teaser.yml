@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.localgov_page.field_hide_title
     - field.field.node.localgov_page.field_site_area
     - field.field.node.localgov_page.localgov_hide_summary
     - field.field.node.localgov_page.localgov_page_banner
@@ -11,7 +12,6 @@ dependencies:
     - field.field.node.localgov_page.localgov_paragraph_content
     - node.type.localgov_page
   module:
-    - text
     - user
 _core:
   default_config_hash: TtIROfZYiPWrzDiyVQC3YZDTbBLRhYrh8EOWmXdx8-U
@@ -21,13 +21,14 @@ bundle: localgov_page
 mode: teaser
 content:
   localgov_page_summary:
-    type: text_default
+    type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
+  field_hide_title: true
   field_site_area: true
   langcode: true
   links: true
