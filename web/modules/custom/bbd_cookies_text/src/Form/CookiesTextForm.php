@@ -1,14 +1,14 @@
-<?php  
-/**  
- * @file  
+<?php
+/**
+ * @file
  * Contains Drupal\bbd_cookies_text\Form\CookiesTextForm.
- */  
+ */
 namespace Drupal\bbd_cookies_text\Form;
 
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-  
+
 class CookiesTextForm extends ConfigFormBase {
 
   const BBD_COOKIES_TEXT_SETTINGS = 'bbd_cookies_text_settings_form';
@@ -44,8 +44,8 @@ class CookiesTextForm extends ConfigFormBase {
       '#description' => $this->t('Please add API Key settings.php file. Example: $config[\'bbd_cookies_text.settings\'][\'civic_api_key\'] = \'&lt;SUPPLIED API KEY&gt;\';'),
       '#default_value' => $this->t('Please add in settings.php'),
       '#disabled' => TRUE,
-    ]; 
-    
+    ];
+
     $form['product_licence'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Product licence type'),
@@ -53,7 +53,85 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => $this->t('Please add in settings.php'),
       '#disabled' => TRUE,
     ];
-    
+
+    $default_accept_behaviour = $config->get('accept_behaviour');
+    $form['accept_behaviour'] = [
+      '#title' => $this->t('Accept behaviour'),
+      '#description' => $this->t('Should the "Accept" buttons accept all cookies or just the recommended cookies'),
+      '#type' => 'select',
+      '#options' => [
+        'all' => $this->t('All'),
+        'recommended' => $this->t('Recommended'),
+      ],
+      '#default_value' => !empty($default_accept_behaviour) ? $default_accept_behaviour : 'all',
+    ];
+
+    $default_accept_text = $config->get('accept_text');
+    $form['accept_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Accept text'),
+      '#size' => 120,
+      '#maxlength' => 255,
+      '#description' => $this->t('The text used in "Accept cookies" button on the initial banner'),
+      '#default_value' => !empty($default_accept_text) ? $default_accept_text : $this->t('Accept cookies'),
+      '#required' => TRUE,
+    ];
+
+    $default_reject_text = $config->get('reject_text');
+    $form['reject_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Reject text'),
+      '#size' => 120,
+      '#maxlength' => 255,
+      '#description' => $this->t('The text used in "Reject cookies" button on the initial banner'),
+      '#default_value' => !empty($default_reject_text) ? $default_reject_text : $this->t('Reject cookies'),
+      '#required' => TRUE,
+    ];
+
+    $default_settings_text = $config->get('settings_text');
+    $form['settings_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Settings text'),
+      '#size' => 120,
+      '#maxlength' => 255,
+      '#description' => $this->t('The text used in "Settings (Cookie preferences)" button on the initial banner'),
+      '#default_value' => !empty($default_settings_text) ? $default_settings_text : $this->t('Cookie preferences'),
+      '#required' => TRUE,
+    ];
+
+    $default_accept_settings = $config->get('accept_settings');
+    $form['accept_settings'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Accept settings text'),
+      '#size' => 120,
+      '#maxlength' => 255,
+      '#description' => $this->t('The text used in "Accept cookies" button on the Cookie Prerences modal popup'),
+      '#default_value' => !empty($default_accept_settings) ? $default_accept_settings : $this->t('Accept all cookies'),
+      '#required' => TRUE,
+    ];
+
+    $default_recommended_settings = $config->get('recommended_settings');
+    $form['recommended_settings'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Accept recommended text'),
+      '#size' => 120,
+      '#maxlength' => 255,
+      '#description' => $this->t('The text used in "Accept recommended cookies" button on the Cookie Prerences modal popup'),
+      '#default_value' => !empty($default_recommended_settings) ? $default_recommended_settings : $this->t('Accept recommended cookies'),
+      '#required' => TRUE,
+    ];
+
+    $default_reject_settings = $config->get('reject_settings');
+    $form['reject_settings'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Reject text'),
+      '#size' => 120,
+      '#maxlength' => 255,
+      '#description' => $this->t('The text used in "Reject cookies" button on the Cookie Prerences modal popup'),
+      '#default_value' => !empty($default_reject_settings) ? $default_reject_settings : $this->t('Reject all cookies'),
+      '#required' => TRUE,
+    ];
+
     $default_title_value = $config->get('title');
     $form['title'] = [
       '#type' => 'textfield',
@@ -64,7 +142,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_title_value) ? $default_title_value : $this->t('This site uses cookies'),
       '#required' => TRUE,
     ];
-    
+
     $default_description_value = $config->get('description');
     $form['description'] = [
       '#type' => 'textarea',
@@ -73,7 +151,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_description_value) ? $default_description_value : $this->t('We use necessary cookies to make our site work. We\'d also like to set optional analytics cookies to help us improve it. We won\'t set optional cookies unless you enable them. There are no external advertisements on this site so we do not set any Advertising Cookies. Using this tool will set a cookie on your device to remember your preferences.'),
       '#required' => TRUE,
     ];
-    
+
     $default_cookie_url = $config->get('cookie_url');
     $form['cookie_url'] = [
       '#type' => 'textfield',
@@ -84,7 +162,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_cookie_url) ? $default_cookie_url :  $base_url . '/cookies',
       '#required' => TRUE,
     ];
-    
+
     $default_cookie_policy = $config->get('cookie_policy');
     $form['cookie_policy'] = [
       '#type' => 'textfield',
@@ -95,7 +173,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_cookie_policy) ? $default_cookie_policy : $this->t('For more detailed information about the cookies we use, see our'),
       '#required' => TRUE,
     ];
-    
+
     $default_cookie_policy_name = $config->get('cookie_policy_name');
     $form['cookie_policy_name'] = [
       '#type' => 'textfield',
@@ -106,7 +184,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_cookie_policy_name) ? $default_cookie_policy_name : $this->t('Cookies page'),
       '#required' => TRUE,
     ];
-    
+
     $default_cookie_policy_date = $config->get('cookie_policy_date');
     $form['cookie_policy_date'] = [
       '#type' => 'date',
@@ -116,7 +194,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_cookie_policy_date) ? $default_cookie_policy_date : $date,
       '#required' => TRUE,
     ];
-    
+
     $default_necessary_title = $config->get('necessary_title');
     $form['necessary_title'] = [
       '#type' => 'textfield',
@@ -127,7 +205,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_necessary_title) ? $default_necessary_title : $this->t('Necessary Cookies'),
       '#required' => TRUE,
     ];
-    
+
     $default_necessary_description = $config->get('necessary_description');
     $form['necessary_description'] = [
       '#type' => 'textarea',
@@ -136,7 +214,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_necessary_description) ? $default_necessary_description : $this->t('Necessary cookies enable core functionality such as security, network management, and accessibility. You may disable these by changing your browser settings, but this may affect how the website functions.'),
       '#required' => TRUE,
     ];
-    
+
     $default_third_Party_cookie_title = $config->get('third_Party_cookie_title');
     $form['third_Party_cookie_title'] = [
       '#type' => 'textfield',
@@ -147,7 +225,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_third_Party_cookie_title) ? $default_third_Party_cookie_title : $this->t('Warning: Some cookies require your attention'),
       '#required' => TRUE,
     ];
-    
+
     $default_third_party_cookie_summary = $config->get('third_party_cookie_summary');
     $form['third_party_cookie_summary'] = [
       '#type' => 'textarea',
@@ -156,7 +234,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_third_party_cookie_summary) ? $default_third_party_cookie_summary : $this->t('Consent for the following cookies may not be automatically revoked. Please use the following the link(s) to find out how to opt out manually.'),
       '#required' => TRUE,
     ];
-    
+
     $default_notify_title = $config->get('notify_title');
     $form['notify_title'] = [
       '#type' => 'textfield',
@@ -167,7 +245,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_notify_title) ? $default_notify_title : $this->t('Your choice regarding cookies on this site'),
       '#required' => TRUE,
     ];
-    
+
     $default_notify_description = $config->get('notify_description');
     $form['notify_description'] = [
       '#type' => 'textarea',
@@ -176,7 +254,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_notify_description) ? $default_notify_description : $this->t('We use cookies to optimise site functionality and give you the best possible experience.'),
       '#required' => TRUE,
     ];
-    
+
     $default_accessibility_alert = $config->get('accessibility_alert');
     $form['accessibility_alert'] = [
       '#type' => 'textfield',
@@ -197,7 +275,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#rows' => 8,
       '#required' => TRUE,
     ];
-    
+
     $default_analytics_label = $config->get('analytics_label');
     $form['analytics_label'] = [
       '#type' => 'textfield',
@@ -208,7 +286,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_analytics_label) ? $default_analytics_label : $this->t('Analytical Cookies'),
       '#required' => TRUE,
     ];
-    
+
     $default_analytics_description = $config->get('analytics_description');
     $form['analytics_description'] = [
       '#type' => 'textarea',
@@ -227,7 +305,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#rows' => 8,
       '#required' => TRUE,
     ];
-    
+
     $default_functional_label = $config->get('functional_label');
     $form['functional_label'] = [
       '#type' => 'textfield',
@@ -238,7 +316,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_functional_label) ? $default_functional_label : $this->t('Functional Cookies'),
       '#required' => TRUE,
     ];
-    
+
     $default_functional_description = $config->get('functional_description');
     $form['functional_description'] = [
       '#type' => 'textarea',
@@ -256,8 +334,8 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_functional_cookies) ? $default_functional_cookies : '',
       '#required' => FALSE,
     ];
-    
-    
+
+
     $default_third_party_label = $config->get('third_party_label');
     $form['third_party_label'] = [
       '#type' => 'textfield',
@@ -268,7 +346,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_third_party_label) ? $default_third_party_label : $this->t('Third Party Cookies'),
       '#required' => TRUE,
     ];
-    
+
     $default_third_party_description = $config->get('third_party_description');
     $form['third_party_description'] = [
       '#type' => 'textarea',
@@ -286,7 +364,7 @@ class CookiesTextForm extends ConfigFormBase {
       '#default_value' => !empty($default_third_party_cookies) ? $default_third_party_cookies : '',
       '#required' => FALSE,
     ];
-  
+
     $default_embed_value = $config->get('embed_cookies_text');
     $form['embed_cookies_text'] = [
       '#type' => 'textfield',
@@ -373,7 +451,14 @@ class CookiesTextForm extends ConfigFormBase {
       ->set('cookie_policy', $form_state->getValue('cookie_policy'))
       ->set('cookie_policy_name', $form_state->getValue('cookie_policy_name'))
       ->set('cookie_policy_date', $form_state->getValue('cookie_policy_date'))
+      ->set('accept_behaviour', $form_state->getValue('accept_behaviour'))
+      ->set('accept_text', $form_state->getValue('accept_text'))
+      ->set('reject_text', $form_state->getValue('reject_text'))
+      ->set('settings_text', $form_state->getValue('settings_text'))
       ->set('necessary_title', $form_state->getValue('necessary_title'))
+      ->set('accept_settings', $form_state->getValue('accept_settings'))
+      ->set('recommended_settings', $form_state->getValue('recommended_settings'))
+      ->set('reject_settings', $form_state->getValue('reject_settings'))
       ->set('necessary_description', $form_state->getValue('necessary_description'))
       ->set('third_Party_cookie_title', $form_state->getValue('third_Party_cookie_title'))
       ->set('third_party_cookie_summary', $form_state->getValue('third_party_cookie_summary'))
