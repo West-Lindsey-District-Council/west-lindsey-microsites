@@ -43,7 +43,16 @@
         grid-template-columns: 75% 25%;
         grid-template-areas:
           "header header"
+          "messages messages"
           "field  submit";
+
+        div[data-drupal-messages] {
+          grid-area: messages;
+
+          .messages {
+            margin-block-start: 0;
+          }
+        }
 
         .js-form-type-processed-text {
           grid-area: header;
@@ -60,6 +69,15 @@
             margin-bottom: var(--spacing-smaller);
           }
         }
+      }
+
+      .form-item, .facet-item, .form-item-webform-terms-of-service {
+        margin-inline-end: 0;
+      }
+
+      .form-item--error,
+      .form-item.error {
+        padding: 0;
       }
 
       input.form-email {

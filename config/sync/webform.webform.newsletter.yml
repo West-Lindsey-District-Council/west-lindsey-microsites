@@ -43,7 +43,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''
@@ -62,7 +62,7 @@ settings:
   form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: false
-  form_disable_inline_errors: false
+  form_disable_inline_errors: true
   form_required: false
   form_autofocus: false
   form_details_toggle: false
@@ -135,7 +135,7 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: inline
   confirmation_url: ''
   confirmation_title: ''
   confirmation_message: ''
