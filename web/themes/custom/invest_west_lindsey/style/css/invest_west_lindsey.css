@@ -760,14 +760,22 @@ a {
 .page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .webform-submission-newsletter-form {
   display: grid;
   grid-template-columns: 75% 25%;
-  grid-template-areas: "header header" "field  submit";
+  grid-template-areas: "header header" "messages messages" "field  submit";
 }
-/* line 48, ../scss/pages/_page.scss */
+/* line 49, ../scss/pages/_page.scss */
+.page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .webform-submission-newsletter-form div[data-drupal-messages] {
+  grid-area: messages;
+}
+/* line 52, ../scss/pages/_page.scss */
+.page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .webform-submission-newsletter-form div[data-drupal-messages] .messages {
+  margin-block-start: 0;
+}
+/* line 57, ../scss/pages/_page.scss */
 .page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .webform-submission-newsletter-form .js-form-type-processed-text {
   grid-area: header;
   margin-block-start: 1rem;
 }
-/* line 52, ../scss/pages/_page.scss */
+/* line 61, ../scss/pages/_page.scss */
 .page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .webform-submission-newsletter-form .js-form-type-processed-text h1,
 .page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .webform-submission-newsletter-form .js-form-type-processed-text h2,
 .page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .webform-submission-newsletter-form .js-form-type-processed-text h3,
@@ -778,8 +786,29 @@ a {
   color: inherit;
   margin-bottom: var(--spacing-smaller);
 }
-/* line 65, ../scss/pages/_page.scss */
+/* line 74, ../scss/pages/_page.scss */
+.page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .form-item, .page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .facet-item, .page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .form-item-webform-terms-of-service {
+  margin-inline-end: 0;
+}
+/* line 78, ../scss/pages/_page.scss */
+.page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .form-item--error,
+.page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .form-item.error {
+  padding: 0;
+}
+/* line 83, ../scss/pages/_page.scss */
 .page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform input.form-email {
   color: inherit;
   border: none;
+}
+/* line 88, ../scss/pages/_page.scss */
+.page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .webform-confirmation {
+  border: none;
+}
+/* line 92, ../scss/pages/_page.scss */
+.page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .webform-confirmation .webform-confirmation__back a {
+  color: inherit;
+}
+/* line 95, ../scss/pages/_page.scss */
+.page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .webform-confirmation .webform-confirmation__back a:visited {
+  color: inherit;
 }
