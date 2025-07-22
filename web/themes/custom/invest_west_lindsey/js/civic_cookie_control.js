@@ -9,15 +9,15 @@
         const third_party_cookies = (drupalSettings.bbd_cookies_text.third_party_cookies !== '') ? "'" + drupalSettings.bbd_cookies_text.third_party_cookies.replace(/(?:\r\n|\r|\n)/g, "', '") + "'" : '';
         var loggedIn = $('#toolbar-administration', context).length;
         var config = {
-          acceptBehaviour: 'recommended',
+          acceptBehaviour:  drupalSettings.bbd_cookies_text.accept_behaviour,
           apiKey: drupalSettings.bbd_cookies_text.civic_api_key,
           product: drupalSettings.bbd_cookies_text.civic_product_type,
           logConsent: true,
           notifyOnce: false,
-          initialState: 'NOTIFY',
-          position: 'LEFT',
-          theme: 'DARK',
-          layout: 'POPUP',
+          initialState: 'notify',
+          position: 'left',
+          theme: 'light',
+          layout: 'popup',
           toggleType: 'slider',
           iabCMP: false,
           closeStyle: 'button',
@@ -38,38 +38,41 @@
           text: {
             title: drupalSettings.bbd_cookies_text.title,
             intro: drupalSettings.bbd_cookies_text.description.replace(/(?:\r\n|\r|\n)/g, '<br>'),
+            acceptRecommended: drupalSettings.bbd_cookies_text.recommended_settings,
+            accept: drupalSettings.bbd_cookies_text.accept_text,
+            reject: drupalSettings.bbd_cookies_text.reject_text,
+            acceptSettings: drupalSettings.bbd_cookies_text.accept_settings,
+            rejectSettings: drupalSettings.bbd_cookies_text.reject_settings,
             necessaryTitle: drupalSettings.bbd_cookies_text.necessary_title,
             necessaryDescription: drupalSettings.bbd_cookies_text.necessary_description.replace(/(?:\r\n|\r|\n)/g, '<br>'),
             thirdPartyTitle: drupalSettings.bbd_cookies_text.third_Party_cookie_title,
             thirdPartyDescription: drupalSettings.bbd_cookies_text.third_Party_cookie_summary,
             on: Drupal.t('On'),
             off: Drupal.t('Off'),
-            settings: Drupal.t('Cookie Preferences'),
+            settings: drupalSettings.bbd_cookies_text.settings_text,
             notifyTitle: drupalSettings.bbd_cookies_text.notify_title,
             notifyDescription: drupalSettings.bbd_cookies_text.notify_description.replace(/(?:\r\n|\r|\n)/g, '<br>'),
             closeLabel: Drupal.t('Save and close'),
             accessibilityAlert: drupalSettings.bbd_cookies_text.accessibility_alert,
           },
-          branding: {
-            fontColor: '#fff',
-            fontFamily: 'Arial,sans-serif',
-            fontSizeTitle: '1.4em',
-            fontSizeHeaders: '1.2em',
-            fontSize: '1em',
-            backgroundColor: '#313147',
-            toggleText: '#fff',
-            toggleColor: '#2f2f5f',
-            toggleBackground: '#111125',
-            alertText: '#fff',
-            alertBackground: '#111125',
-            acceptText: '#ffffff',
-            acceptBackground: '#111125',
-            buttonIcon: null,
-            buttonIconWidth: '64px',
-            buttonIconHeight: '64px',
-            removeIcon: false,
-            removeAbout: true
-          },
+          // branding: {
+          //   fontColor: '#fff',
+          //   fontFamily: 'Arial,sans-serif',
+          //   fontSizeTitle: '1.4em',
+          //   fontSizeHeaders: '1.2em',
+          //   fontSize: '1em',
+          //   backgroundColor: '#313147',
+          //   toggleText: '#fff',
+          //   toggleColor: '#2f2f5f',
+          //   toggleBackground: '#111125',
+          //   alertText: '#fff',
+          //   alertBackground: '#111125',
+          //   buttonIcon: null,
+          //   buttonIconWidth: '64px',
+          //   buttonIconHeight: '64px',
+          //   removeIcon: false,
+          //   removeAbout: true
+          // },
           necessaryCookies: [ necessary_cookies ],
           optionalCookies: [
             {
@@ -82,22 +85,22 @@
                   $('.cookies-anayltics-allowed').show();
                   $('.no-cookies-anayltics-allowed').hide();
                   // Enable Analytics Cookies in GTM
-                  dataLayer.push({
-                    'event' : 'analytics_consented',
-                    'cookies_analytics' : true
-                  });
-                  gtag('consent', 'update', {'analytics_storage': 'granted'});
+                  // dataLayer.push({
+                  //   'event' : 'analytics_consented',
+                  //   'cookies_analytics' : true
+                  // });
+                  // gtag('consent', 'update', {'analytics_storage': 'granted'});
                 };
               },
               onRevoke: function () {
                 $('.cookies-anayltics-allowed').hide();
                 $('.no-cookies-anayltics-allowed').css('display', 'flex');
                 // Disabled Analytics Cookies in GTM
-                dataLayer.push({
-                  'event' : 'analytics_revoked',
-                  'cookies_analytics' : false
-                });
-                gtag('consent', 'update', {'analytics_storage': 'denied'});
+                // dataLayer.push({
+                //   'event' : 'analytics_revoked',
+                //   'cookies_analytics' : false
+                // });
+                // gtag('consent', 'update', {'analytics_storage': 'denied'});
               },
               recommendedState: 'on',
               lawfulBasis: 'consent',
@@ -108,30 +111,35 @@
               description: drupalSettings.bbd_cookies_text.functional_description.replace(/(?:\r\n|\r|\n)/g, '<br>'),
               cookies: [ functional_cookies ],
               onAccept: function () {
-                // Easysite cookie, show Google Translate, show SpeakIT
-                $('.gtranslate').show();
+                // Show Google Translate
+                $('.gtranslate_wrapper').show();
                 $('.cookies-functional-allowed').show();
                 $('.no-cookies-functional-allowed').hide();
                 // Enable Functional Cookies in GTM
-                dataLayer.push({
-                  'event' : 'functional_consented',
-                  'cookies_functional' : true
-                });
-                gtag('consent', 'update', {'functionality_storage': 'granted'});
+                // dataLayer.push({
+                //   'event' : 'functional_consented',
+                //   'cookies_functional' : true
+                // });
+                // gtag('consent', 'update', {'functionality_storage': 'granted'});
               },
               onRevoke: function () {
-                // hide Easysite cookie, hide Google Translate, hide SpeakIT
-                $('.gtranslate').hide();
+                // hide Google Translate
+                $('.gtranslate_wrapper').hide();
                 $('.cookies-functional-allowed').hide();
                 $('.no-cookies-functional-allowed').css('display', 'flex');
-                // Disable Functional Cookies in GTM
-                dataLayer.push({
-                  'event' : 'functional_revoked',
-                  'cookies_functional' : false
-                });
-                gtag('consent', 'update', {'functionality_storage': 'denied'});
-                // remove Google Translate cookie
+                // Disable Functional Cookies in GTM.
+                // dataLayer.push({
+                //   'event' : 'functional_revoked',
+                //   'cookies_functional' : false
+                // });
+                // gtag('consent', 'update', {'functionality_storage': 'denied'});
+                // remove Google Translate cookie.
                 CookieControl.delete("googtrans");
+                // If Genesys chat bot is loaded clear all message history and reload page.
+                if (typeof Genesys === "function") {
+                  Genesys("command", "Messenger.clear");
+                  location.reload(true);
+                }
               },
               recommendedState: 'on',
               lawfulBasis: 'consent',
@@ -145,10 +153,10 @@
                 $('.cookies-thirdparty-allowed').show();
                 $('.no-cookies-thirdparty-allowed').hide();
                 // Enable Third Party Cookies in GTM
-                dataLayer.push({
-                  'event' : 'thirdparty_consented',
-                  'cookies_thirdparty' : true
-                });
+                // dataLayer.push({
+                //   'event' : 'thirdparty_consented',
+                //   'cookies_thirdparty' : true
+                // });
               },
               onRevoke: function () {
                 $('.cookies-thirdparty-allowed').hide();
