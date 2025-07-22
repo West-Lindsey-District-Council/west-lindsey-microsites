@@ -28,3 +28,10 @@ video_cookies_text: "We're sorry, this video can place cookies in your browser a
 feature_cookies_text: "To continue using this functionality, please [link] and accept 'Third Party Cookies'."
 link_cookies_text: 'open cookie preferences'
 button_cookies_text: 'Open cookie preferences'
+accept_behaviour: all
+accept_text: 'Accept cookies'
+reject_text: 'Reject cookies'
+settings_text: 'Cookie preferences'
+accept_settings: 'Accept all cookies'
+recommended_settings: 'Accept recommended cookies'
+reject_settings: 'Reject all cookies'

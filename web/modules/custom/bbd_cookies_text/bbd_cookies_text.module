@@ -32,7 +32,7 @@ function bbd_cookies_text_page_attachments(array &$page) {
   $config = \Drupal::configFactory()->get('bbd_cookies_text.settings');
   $civic_api_key = $config->get('civic_api_key');
   $civic_product_type = $config->get('civic_product_type');
- 
+
   if ($civic_api_key == '') {
     $civic_api_key = 'Please supply key in settings.php';
   }
@@ -46,98 +46,126 @@ function bbd_cookies_text_page_attachments(array &$page) {
   else {
     $date = new DrupalDateTime($config->get('cookie_policy_date'));
   }
-  
+
   $cookie_policy_date = $date->format("d/m/Y");
-  
+
   $page['#attached']['drupalSettings']['bbd_cookies_text']['civic_api_key'] = $civic_api_key;
   $page['#attached']['drupalSettings']['bbd_cookies_text']['civic_product_type'] = $civic_product_type;
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['title'] = 
-    !empty($config->get('title')) ? 
-    $config->get('title') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['accept_behaviour'] =
+    !empty($config->get('accept_behaviour')) ?
+    $config->get('accept_behaviour') :
+    'all'; // this doesn't need translating as it is the actual API setting.
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['accept_text'] =
+    !empty($config->get('accept_text')) ?
+    $config->get('accept_text') :
+    t('Accept cookies');
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['reject_text'] =
+    !empty($config->get('reject_text')) ?
+    $config->get('reject_text') :
+    t('Reject cookies');
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['settings_text'] =
+    !empty($config->get('settings_text')) ?
+    $config->get('settings_text') :
+    t('Cookie preferences');
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['accept_settings'] =
+    !empty($config->get('accept_settings')) ?
+    $config->get('accept_settings') :
+    t('Accept all cookies');
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['recommended_settings'] =
+    !empty($config->get('recommended_settings')) ?
+    $config->get('recommended_settings') :
+    t('Accept recommended cookies');
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['reject_settings'] =
+    !empty($config->get('reject_settings')) ?
+    $config->get('reject_settings') :
+    t('Reject all cookies');
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['title'] =
+    !empty($config->get('title')) ?
+    $config->get('title') :
     t('This site uses cookies to store information on your computer');
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['description'] = 
-    !empty($config->get('description')) ? 
-    $config->get('description') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['description'] =
+    !empty($config->get('description')) ?
+    $config->get('description') :
     t('Some of these cookies are essential, while others help us to improve your experience by providing insights into how the site is being used.');
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['cookie_url'] = 
-    !empty($config->get('cookie_url')) ? 
-    $config->get('cookie_url') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['cookie_url'] =
+    !empty($config->get('cookie_url')) ?
+    $config->get('cookie_url') :
     $base_url . '/cookies';
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['cookie_policy'] = 
-    !empty($config->get('cookie_policy')) ? 
-    $config->get('cookie_policy') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['cookie_policy'] =
+    !empty($config->get('cookie_policy')) ?
+    $config->get('cookie_policy') :
     t('For more detailed information on the cookies we use, please check our');
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['cookie_policy_name'] = 
-    !empty($config->get('cookie_policy_name')) ? 
-    $config->get('cookie_policy_name') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['cookie_policy_name'] =
+    !empty($config->get('cookie_policy_name')) ?
+    $config->get('cookie_policy_name') :
     t('Cookies Policy');
   $page['#attached']['drupalSettings']['bbd_cookies_text']['cookie_policy_date'] = $cookie_policy_date;
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['necessary_title'] = 
-    !empty($config->get('necessary_title')) ? 
-    $config->get('necessary_title') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['necessary_title'] =
+    !empty($config->get('necessary_title')) ?
+    $config->get('necessary_title') :
     t('Necessary Cookies');
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['necessary_description'] = 
-    !empty($config->get('necessary_description')) ? 
-    $config->get('necessary_description') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['necessary_description'] =
+    !empty($config->get('necessary_description')) ?
+    $config->get('necessary_description') :
     t('Necessary cookies enable core functionality. The website cannot function properly without these cookies, and can only be disabled by changing your browser preferences.');
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['third_Party_cookie_title'] = 
-    !empty($config->get('third_Party_cookie_title')) ? 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['third_Party_cookie_title'] =
+    !empty($config->get('third_Party_cookie_title')) ?
     $config->get('third_Party_cookie_title') :
     t('Warning: Some cookies require your attention.');
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['third_party_cookie_summary'] = 
-    !empty($config->get('third_party_cookie_summary')) ? 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['third_party_cookie_summary'] =
+    !empty($config->get('third_party_cookie_summary')) ?
     $config->get('third_party_cookie_summary') :
     t('Consent for the following cookies could not be automatically revoked. Please follow the link(s) below to opt out manually.');
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['notify_title'] = 
-    !empty($config->get('notify_title')) ? 
-    $config->get('notify_title') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['notify_title'] =
+    !empty($config->get('notify_title')) ?
+    $config->get('notify_title') :
     t('Your choice regarding cookies on this site');
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['notify_description'] = 
-    !empty($config->get('notify_description')) ? 
-    $config->get('notify_description') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['notify_description'] =
+    !empty($config->get('notify_description')) ?
+    $config->get('notify_description') :
     t('We use cookies to optimise site functionality and give you the best possible experience.');
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['accessibility_alert'] = 
-    !empty($config->get('accessibility_alert')) ? 
-    $config->get('accessibility_alert') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['accessibility_alert'] =
+    !empty($config->get('accessibility_alert')) ?
+    $config->get('accessibility_alert') :
     t('This site uses cookies to store information. Press accesskey C to learn more about your options.');
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['necessary_cookies'] = 
-    !empty($config->get('necessary_cookies')) ? 
-    $config->get('necessary_cookies') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['necessary_cookies'] =
+    !empty($config->get('necessary_cookies')) ?
+    $config->get('necessary_cookies') :
     'SESS*';
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['analytics_label'] = 
-    !empty($config->get('analytics_label')) ? 
-    $config->get('analytics_label') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['analytics_label'] =
+    !empty($config->get('analytics_label')) ?
+    $config->get('analytics_label') :
     t('Analytical Cookies');
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['analytics_description'] = 
-    !empty($config->get('analytics_description')) ? 
-    $config->get('analytics_description') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['analytics_description'] =
+    !empty($config->get('analytics_description')) ?
+    $config->get('analytics_description') :
     t('Analytical cookies help us to improve our website by collecting and reporting information on its usage.');
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['analytics_cookies'] = 
-    !empty($config->get('analytics_cookies')) ? 
-    $config->get('analytics_cookies') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['analytics_cookies'] =
+    !empty($config->get('analytics_cookies')) ?
+    $config->get('analytics_cookies') :
     "_ga\r\n_gid\r\n_gat\r\n_ga_*\r\n_gat_*";
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['functional_label'] = 
-    !empty($config->get('functional_label')) ? 
-    $config->get('functional_label') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['functional_label'] =
+    !empty($config->get('functional_label')) ?
+    $config->get('functional_label') :
     '';
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['functional_description'] = 
-    !empty($config->get('functional_description')) ? 
-    $config->get('functional_description') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['functional_description'] =
+    !empty($config->get('functional_description')) ?
+    $config->get('functional_description') :
     '';
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['functional_cookies'] = 
-    !empty($config->get('functional_cookies')) ? 
-    $config->get('functional_cookies') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['functional_cookies'] =
+    !empty($config->get('functional_cookies')) ?
+    $config->get('functional_cookies') :
     '';
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['third_party_label'] = 
-    !empty($config->get('third_party_label')) ? 
-    $config->get('third_party_label') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['third_party_label'] =
+    !empty($config->get('third_party_label')) ?
+    $config->get('third_party_label') :
     '';
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['third_party_description'] = 
-    !empty($config->get('third_party_description')) ? 
-    $config->get('third_party_description') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['third_party_description'] =
+    !empty($config->get('third_party_description')) ?
+    $config->get('third_party_description') :
     '';
-  $page['#attached']['drupalSettings']['bbd_cookies_text']['third_party_cookies'] = 
-    !empty($config->get('third_party_cookies')) ? 
-    $config->get('third_party_cookies') : 
+  $page['#attached']['drupalSettings']['bbd_cookies_text']['third_party_cookies'] =
+    !empty($config->get('third_party_cookies')) ?
+    $config->get('third_party_cookies') :
     '';
 }

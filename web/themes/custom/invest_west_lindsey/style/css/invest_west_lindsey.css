@@ -223,17 +223,18 @@ a {
 
 /* line 1, ../scss/components/_owl_carousel.scss */
 .full__banner {
+  position: relative;
   max-width: var(--width-mega);
   margin-inline: auto;
   margin-bottom: calc(var(--spacing-large) * -1);
   padding-bottom: var(--spacing-large);
   background-color: #494d57;
 }
-/* line 8, ../scss/components/_owl_carousel.scss */
+/* line 9, ../scss/components/_owl_carousel.scss */
 .full__banner::before {
   content: '';
   position: absolute;
-  z-index: 10;
+  z-index: 2;
   top: 0;
   right: 0;
   bottom: 95%;
@@ -242,14 +243,14 @@ a {
   margin-inline: auto;
   background-image: linear-gradient(#494d57, transparent);
 }
-/* line 22, ../scss/components/_owl_carousel.scss */
+/* line 23, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme .owl-dots {
   position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
 }
-/* line 28, ../scss/components/_owl_carousel.scss */
+/* line 29, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme .owl-dots .owl-dot {
   background: 0 0;
   color: inherit;
@@ -265,7 +266,7 @@ a {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 44, ../scss/components/_owl_carousel.scss */
+/* line 45, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme .owl-dots .owl-dot span {
   width: 10px;
   height: 10px;
@@ -275,52 +276,52 @@ a {
   transition: opacity .2s ease;
   border-radius: 30px;
 }
-/* line 55, ../scss/components/_owl_carousel.scss */
+/* line 56, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme .owl-dots .owl-dot.active span {
   background: #869791;
 }
-/* line 63, ../scss/components/_owl_carousel.scss */
+/* line 64, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme .owl-nav [class*=owl-] {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 69, ../scss/components/_owl_carousel.scss */
+/* line 70, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme .owl-nav .owl-prev {
   left: 0;
 }
-/* line 73, ../scss/components/_owl_carousel.scss */
+/* line 74, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme .owl-nav .owl-next {
   right: 0;
 }
-/* line 77, ../scss/components/_owl_carousel.scss */
+/* line 78, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme .owl-nav .disabled {
   display: none;
   opacity: .5;
   cursor: default;
 }
-/* line 82, ../scss/components/_owl_carousel.scss */
+/* line 83, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme .owl-nav .disabled:hover, .full__banner .owl-theme .owl-nav .disabled:focus {
   background: rgba(73, 77, 87, 0.19);
   color: #fff;
 }
-/* line 89, ../scss/components/_owl_carousel.scss */
+/* line 90, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme .owl-nav.disabled + .owl-dots {
   margin-top: 10px;
 }
-/* line 94, ../scss/components/_owl_carousel.scss */
+/* line 95, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel {
   display: none;
   width: 100%;
   position: relative;
   z-index: 1;
 }
-/* line 100, ../scss/components/_owl_carousel.scss */
+/* line 101, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel .owl-stage {
   position: relative;
   touch-action: pan-Y;
 }
-/* line 104, ../scss/components/_owl_carousel.scss */
+/* line 105, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel .owl-stage:after {
   content: ".";
   display: block;
@@ -329,102 +330,102 @@ a {
   line-height: 0;
   height: 0;
 }
-/* line 114, ../scss/components/_owl_carousel.scss */
+/* line 115, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel .owl-stage-outer {
   position: relative;
   overflow: hidden;
   transform: translate3d(0px, 0, 0);
 }
-/* line 120, ../scss/components/_owl_carousel.scss */
+/* line 121, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel .owl-item {
   position: relative;
   min-height: 1px;
   float: left;
 }
-/* line 125, ../scss/components/_owl_carousel.scss */
+/* line 126, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel .owl-item img {
   display: block;
   width: 100%;
   transform-style: preserve-3d;
 }
-/* line 134, ../scss/components/_owl_carousel.scss */
+/* line 135, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel.owl-big .owl-item img {
   transform-style: preserve-3d;
 }
-/* line 142, ../scss/components/_owl_carousel.scss */
+/* line 143, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel.owl-thumb .owl-item img {
   border: 5px solid transparent;
   cursor: pointer;
 }
-/* line 146, ../scss/components/_owl_carousel.scss */
+/* line 147, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel.owl-thumb .owl-item img:hover, .full__banner .owl-theme.owl-carousel.owl-thumb .owl-item img:focus {
   border-color: #a3a353;
 }
-/* line 154, ../scss/components/_owl_carousel.scss */
+/* line 155, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel .owl-dots.disabled, .full__banner .owl-theme.owl-carousel .owl-nav.disabled {
   display: none;
 }
-/* line 158, ../scss/components/_owl_carousel.scss */
+/* line 159, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel .owl-dot {
   cursor: pointer;
   user-select: none;
 }
-/* line 163, ../scss/components/_owl_carousel.scss */
+/* line 164, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel.owl-loaded {
   display: block;
 }
-/* line 167, ../scss/components/_owl_carousel.scss */
+/* line 168, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel.owl-loading {
   opacity: 0;
   display: block;
 }
-/* line 172, ../scss/components/_owl_carousel.scss */
+/* line 173, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel.owl-hidden {
   opacity: 0;
 }
-/* line 176, ../scss/components/_owl_carousel.scss */
+/* line 177, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel.owl-refresh .owl-item {
   display: none;
 }
-/* line 180, ../scss/components/_owl_carousel.scss */
+/* line 181, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel.owl-drag .owl-item {
   user-select: none;
 }
-/* line 184, ../scss/components/_owl_carousel.scss */
+/* line 185, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel.owl-grab {
   cursor: -webkit-grab;
   cursor: -o-grab;
   cursor: -ms-grab;
   cursor: grab;
 }
-/* line 188, ../scss/components/_owl_carousel.scss */
+/* line 189, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel.owl-rtl {
   direction: rtl;
 }
-/* line 191, ../scss/components/_owl_carousel.scss */
+/* line 192, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel.owl-rtl .owl-item {
   float: right;
 }
-/* line 196, ../scss/components/_owl_carousel.scss */
+/* line 197, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme.owl-carousel.no-js {
   display: block;
 }
-/* line 203, ../scss/components/_owl_carousel.scss */
+/* line 204, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-carousel .animated {
   -webkit-animation-duration: 1000ms;
   animation-duration: 1000ms;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-/* line 210, ../scss/components/_owl_carousel.scss */
+/* line 211, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-carousel .owl-animated-in {
   z-index: 0;
 }
-/* line 214, ../scss/components/_owl_carousel.scss */
+/* line 215, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-carousel .owl-animated-out {
   z-index: 1;
 }
-/* line 218, ../scss/components/_owl_carousel.scss */
+/* line 219, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-carousel .fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
@@ -445,12 +446,12 @@ a {
     opacity: 0;
   }
 }
-/* line 244, ../scss/components/_owl_carousel.scss */
+/* line 245, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-outer {
   position: relative;
   max-width: 100%;
 }
-/* line 248, ../scss/components/_owl_carousel.scss */
+/* line 249, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-outer .owl-control {
   position: absolute;
   bottom: 0;
@@ -458,21 +459,21 @@ a {
   z-index: 1;
   display: flex;
 }
-/* line 255, ../scss/components/_owl_carousel.scss */
+/* line 256, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-outer .owl-control button {
   display: none;
   margin-right: 0;
 }
-/* line 259, ../scss/components/_owl_carousel.scss */
+/* line 260, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-outer .owl-control button.play, .full__banner .owl-outer .owl-control button.pause {
   display: inline-flex;
   align-items: center;
 }
-/* line 264, ../scss/components/_owl_carousel.scss */
+/* line 265, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-outer .owl-control button.play .button-text, .full__banner .owl-outer .owl-control button.pause .button-text {
   margin-left: 5px;
 }
-/* line 271, ../scss/components/_owl_carousel.scss */
+/* line 272, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-outer button {
   outline: none;
   color: #fff;
@@ -483,23 +484,23 @@ a {
   font-size: 0.5rem;
 }
 @media (min-width: 30em) {
-  /* line 271, ../scss/components/_owl_carousel.scss */
+  /* line 272, ../scss/components/_owl_carousel.scss */
   .full__banner .owl-outer button {
     font-size: 1rem;
   }
 }
-/* line 284, ../scss/components/_owl_carousel.scss */
+/* line 285, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-outer button:hover, .full__banner .owl-outer button:focus {
   background: rgba(255, 255, 255, 0.5);
   color: #000;
   text-decoration: none;
   border-color: #FFD047;
 }
-/* line 299, ../scss/components/_owl_carousel.scss */
+/* line 300, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-big.owl-carousel .owl-stage .owl-item .js-media-library-item-preview {
   display: block;
 }
-/* line 303, ../scss/components/_owl_carousel.scss */
+/* line 304, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-big.owl-carousel .owl-stage .owl-item .image-caption {
   margin: auto;
   font-size: 0.9em;
@@ -509,7 +510,7 @@ a {
   text-align: center;
   color: #383A42;
 }
-/* line 321, ../scss/components/_owl_carousel.scss */
+/* line 322, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-thumb.owl-carousel .owl-stage .owl-item .image-caption {
   display: none;
 }
