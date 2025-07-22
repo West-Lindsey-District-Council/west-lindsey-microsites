@@ -800,3 +800,15 @@ a {
   color: inherit;
   border: none;
 }
+/* line 88, ../scss/pages/_page.scss */
+.page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .webform-confirmation {
+  border: none;
+}
+/* line 92, ../scss/pages/_page.scss */
+.page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .webform-confirmation .webform-confirmation__back a {
+  color: inherit;
+}
+/* line 95, ../scss/pages/_page.scss */
+.page-node-type-localgov-page .paragraph--type--webform .field--name-field-webform .webform-confirmation .webform-confirmation__back a:visited {
+  color: inherit;
+}

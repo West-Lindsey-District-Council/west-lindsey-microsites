@@ -84,6 +84,20 @@
         color: inherit;
         border: none;
       }
+
+      .webform-confirmation {
+        border: none;
+
+        .webform-confirmation__back {
+          a {
+            color: inherit;
+
+            &:visited {
+              color: inherit;
+            }
+          }
+        }
+      }
     }
   }
 }
