@@ -31,12 +31,12 @@
 
   .paragraph--type--webform {
     margin: 6rem -1rem 0;
-    background-color: $coral;
-    color: $grey_dark;
 
-    .field--name-field-webform {
-      width: 50%;
-      margin-inline: auto;
+    .webform-newsletter {
+      width: 100%;
+      padding-inline: 25%;
+      background-color: $coral;
+      color: $grey_dark;
 
       .webform-submission-newsletter-form {
         display: grid;
