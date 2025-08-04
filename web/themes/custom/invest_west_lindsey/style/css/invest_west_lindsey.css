@@ -46,34 +46,38 @@
 .microsite-footer .region-microsites-footer.lgd-container > .lgd-region__inner .lgd-row:nth-child(1) .field--name-lgms-footer-logos {
   justify-content: flex-start;
 }
-/* line 20, ../scss/base/_footer.scss */
+/* line 17, ../scss/base/_footer.scss */
+.microsite-footer .region-microsites-footer.lgd-container > .lgd-region__inner .lgd-row:nth-child(1) .field--name-lgms-footer-logos img {
+  max-width: 250px;
+}
+/* line 23, ../scss/base/_footer.scss */
 .microsite-footer .region-microsites-footer.lgd-container > .lgd-region__inner .lgd-row:nth-child(2) {
   grid-area: top2;
 }
-/* line 23, ../scss/base/_footer.scss */
+/* line 26, ../scss/base/_footer.scss */
 .microsite-footer .region-microsites-footer.lgd-container > .lgd-region__inner .lgd-row:nth-child(2) .microsite-footer__housekeeping {
   justify-content: flex-end;
 }
-/* line 26, ../scss/base/_footer.scss */
+/* line 29, ../scss/base/_footer.scss */
 .microsite-footer .region-microsites-footer.lgd-container > .lgd-region__inner .lgd-row:nth-child(2) .microsite-footer__housekeeping .menu--menu-level-0 {
   flex-direction: column;
   align-content: end;
 }
-/* line 30, ../scss/base/_footer.scss */
+/* line 33, ../scss/base/_footer.scss */
 .microsite-footer .region-microsites-footer.lgd-container > .lgd-region__inner .lgd-row:nth-child(2) .microsite-footer__housekeeping .menu--menu-level-0 .menu-item {
   text-align: right;
   line-height: 1;
 }
-/* line 38, ../scss/base/_footer.scss */
+/* line 41, ../scss/base/_footer.scss */
 .microsite-footer .region-microsites-footer.lgd-container > .lgd-region__inner .microsite-footer__banner {
   grid-area: middle;
   margin-bottom: var(--spacing-large);
 }
-/* line 43, ../scss/base/_footer.scss */
+/* line 46, ../scss/base/_footer.scss */
 .microsite-footer .region-microsites-footer.lgd-container > .lgd-region__inner .lgd-row:nth-child(4) {
   grid-area: bottom;
 }
-/* line 46, ../scss/base/_footer.scss */
+/* line 49, ../scss/base/_footer.scss */
 .microsite-footer .region-microsites-footer.lgd-container > .lgd-region__inner .lgd-row:nth-child(4) .microsite-footer__copyright {
   justify-content: flex-start;
 }
@@ -214,9 +218,10 @@ a {
 }
 /* line 16, ../scss/base/_header.scss */
 .microsite-header .region-microsites-header .microsite-header__main .microsite-header__menus .microsite-header__menu .menu--menu-level-0 .menu-item a {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
-/* line 19, ../scss/base/_header.scss */
+/* line 20, ../scss/base/_header.scss */
 .microsite-header .region-microsites-header .microsite-header__main .microsite-header__menus .microsite-header__menu .menu--menu-level-0 .menu-item a:hover {
   text-decoration-thickness: calc(max(3px, 0.1875rem, 0.12em));
 }
