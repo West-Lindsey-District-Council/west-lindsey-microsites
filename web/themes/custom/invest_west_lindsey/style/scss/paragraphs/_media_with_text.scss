@@ -21,6 +21,9 @@
   }
 
   .media-with-text__body {
+    h2 {
+      color: inherit;
+    }
     a {
         @extend %button;
       }
