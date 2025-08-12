@@ -123,7 +123,7 @@ button, input, optgroup, select, textarea {
 
 /* line 41, ../scss/base/_form.scss */
 input[type="submit"].homepage-submit {
-  background-color: #39697d;
+  background-color: #0C2836;
   color: #fff;
   border: none;
 }
@@ -201,7 +201,7 @@ a {
 
 /* line 78, ../scss/base/_general.scss */
 .lgd-region--messages .lgd-container {
-  background-color: #494d57;
+  background-color: #0C2836;
 }
 
 /* line 4, ../scss/base/_header.scss */
@@ -233,7 +233,7 @@ a {
   margin-inline: auto;
   margin-bottom: calc(var(--spacing-large) * -1);
   padding-bottom: var(--spacing-large);
-  background-color: #494d57;
+  background-color: #0C2836;
 }
 /* line 9, ../scss/components/_owl_carousel.scss */
 .full__banner::before {
@@ -246,7 +246,7 @@ a {
   left: 0;
   max-width: var(--width-mega);
   margin-inline: auto;
-  background-image: linear-gradient(#494d57, transparent);
+  background-image: linear-gradient(#0C2836, transparent);
 }
 /* line 23, ../scss/components/_owl_carousel.scss */
 .full__banner .owl-theme .owl-dots {
@@ -661,21 +661,25 @@ a {
 .paragraph--type--localgov-media-with-text .media-with-text__inner .media-with-text__media > .field__item > * {
   position: relative;
 }
-/* line 30, ../scss/paragraphs/_media_with_text.scss */
+/* line 24, ../scss/paragraphs/_media_with_text.scss */
+.paragraph--type--localgov-media-with-text .media-with-text__body h2 {
+  color: inherit;
+}
+/* line 33, ../scss/paragraphs/_media_with_text.scss */
 .paragraph--type--localgov-media-with-text.media-with-text--media-right .media-with-text__body {
   padding-inline-start: 2rem;
 }
-/* line 36, ../scss/paragraphs/_media_with_text.scss */
+/* line 39, ../scss/paragraphs/_media_with_text.scss */
 .paragraph--type--localgov-media-with-text.media-with-text--media-right .media-with-text__media > .field__item > * {
   box-shadow: -15px 15px 15px -3px #000;
   top: 1rem;
   right: 1rem;
 }
-/* line 46, ../scss/paragraphs/_media_with_text.scss */
+/* line 49, ../scss/paragraphs/_media_with_text.scss */
 .paragraph--type--localgov-media-with-text.media-with-text--media-left .media-with-text__body {
   padding-inline-end: 2rem;
 }
-/* line 52, ../scss/paragraphs/_media_with_text.scss */
+/* line 55, ../scss/paragraphs/_media_with_text.scss */
 .paragraph--type--localgov-media-with-text.media-with-text--media-left .media-with-text__media > .field__item > * {
   box-shadow: 15px 15px 15px -3px #000;
   top: 1rem;
@@ -736,7 +740,7 @@ a {
 }
 /* line 7, ../scss/pages/_page.scss */
 .page-node-type-localgov-page .main .node--type-localgov-page .lgd-container {
-  background-color: #494d57;
+  background-color: #0C2836;
 }
 /* line 12, ../scss/pages/_page.scss */
 .page-node-type-localgov-page .main .node--type-localgov-page .lgd-page-section .lgd-container {
