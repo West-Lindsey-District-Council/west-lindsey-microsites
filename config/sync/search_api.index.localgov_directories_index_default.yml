@@ -12,6 +12,7 @@ dependencies:
     - search_api.server.localgov_directories_default
   module:
     - geo_entity
+    - localgov_directories
     - localgov_microsites_group
     - node
     - search_api_location
@@ -154,6 +155,9 @@ processor_settings:
       - rendered_item
       - title
   language_with_fallback: {  }
+  localgov_directories_sort_field:
+    weights:
+      preprocess_index: -20
   rendered_item: {  }
   stemmer:
     weights:
