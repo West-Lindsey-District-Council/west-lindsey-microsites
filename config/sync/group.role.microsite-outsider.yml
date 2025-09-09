@@ -25,6 +25,8 @@ permissions:
   - 'view group_node:localgov_directory entity'
   - 'view group_node:localgov_directory_promo_page entity'
   - 'view group_node:localgov_event entity'
+  - 'view group_node:localgov_guides_overview entity'
+  - 'view group_node:localgov_guides_page entity'
   - 'view group_node:localgov_news_article entity'
   - 'view group_node:localgov_newsroom entity'
   - 'view group_node:localgov_page entity'

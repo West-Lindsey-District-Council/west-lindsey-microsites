@@ -51,7 +51,7 @@ third_party_settings:
         - localgov_directory_title_sort
         - body
         - localgov_directory_files
-      label: Description
+      label: Content
       region: content
       parent_name: group_tabs
       weight: 6
