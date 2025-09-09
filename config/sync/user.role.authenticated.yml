@@ -10,6 +10,7 @@ dependencies:
     - filter
     - fontawesome
     - geo_entity
+    - localgov_directories
     - media
     - system
     - taxonomy
@@ -24,6 +25,7 @@ permissions:
   - 'access fontawesome additional settings'
   - 'use text format webform_default'
   - 'use text format wysiwyg'
+  - 'view directory facets'
   - 'view geo'
   - 'view media'
   - 'view term revisions in site_area'
