@@ -218,6 +218,8 @@ display:
               localgov_directory: search_result
               localgov_directory_promo_page: search_result
               localgov_event: search_result
+              localgov_guides_overview: search_result
+              localgov_guides_page: search_result
               localgov_news_article: search_result
               localgov_newsroom: search_result
               localgov_page: search_result

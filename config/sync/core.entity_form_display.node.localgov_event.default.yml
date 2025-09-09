@@ -52,7 +52,7 @@ third_party_settings:
         - localgov_event_call_to_action
         - localgov_paragraph_content
         - lgms_banner
-      label: Details
+      label: Content
       region: content
       parent_name: group_tags
       weight: 4

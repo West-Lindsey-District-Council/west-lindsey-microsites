@@ -92,6 +92,7 @@ module:
   localgov_forms: 0
   localgov_geo: 0
   localgov_geo_address: 0
+  localgov_guides: 0
   localgov_homepage_paragraphs: 0
   localgov_media: 0
   localgov_microsites_blogs: 0
@@ -101,6 +102,7 @@ module:
   localgov_microsites_group: 0
   localgov_microsites_group_term_ui: 0
   localgov_microsites_group_webform: 0
+  localgov_microsites_guides: 0
   localgov_microsites_media: 0
   localgov_microsites_news: 0
   localgov_news: 0
