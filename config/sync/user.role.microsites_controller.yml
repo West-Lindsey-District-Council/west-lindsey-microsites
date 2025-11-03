@@ -53,6 +53,7 @@ permissions:
   - 'administer users'
   - 'administer webform'
   - 'administer webform element access'
+  - 'administer webform overview'
   - 'administer webform submission'
   - 'assign microsites_controller role'
   - 'assign microsites_trusted_editor role'
