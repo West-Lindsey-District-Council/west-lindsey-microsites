@@ -1,9 +1,11 @@
-.page-node-type-localgov-page {
+.page-node-type-localgov-page,
+.page-node-type-localgov-webform {
   .main {
     margin-block-end: -2rem;
     padding-bottom: var(--spacing-large);
 
-    .node--type-localgov-page {
+    .node--type-localgov-page,
+    .node--type-localgov-webform {
       .lgd-container {
         background-color: $body-bg;
       }
