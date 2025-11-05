@@ -84,7 +84,7 @@
 
 /* line 1, ../scss/base/_form.scss */
 button, input, optgroup, select, textarea {
-  color: var(--color-text);
+  color: var(--page-background-color);
   border-color: #E2E2E4;
 }
 
